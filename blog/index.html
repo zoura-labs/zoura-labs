@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | Web Development, App Development, Software & Digital Insights | Zoura Labs</title>
+    <meta name="description" content="Explore insights on web development, mobile app development, software engineering, AI automation, SEO, branding, and digital marketing. Zoura Labs shares practical guides, strategies, and industry trends to help businesses grow digitally.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"Article",
+            "headline":"How Much Does a Website Cost in Sri Lanka?",
+            "image":"https://ceylondigital.com/assets/blog/website-cost.jpg",
+            "author":{
+                "@type":"Organization",
+                "name":"Ceylon Digital"
+            },
+            "publisher":{
+                "@type":"Organization",
+                "name":"Ceylon Digital",
+                "logo":{
+                "@type":"ImageObject",
+                "url":"https://ceylondigital.com/assets/icons/logo.svg"
+            }
+            },
+            "datePublished":"2026-06-11",
+            "dateModified":"2026-06-11"
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"BreadcrumbList",
+            "itemListElement":[
+                {
+                    "@type":"ListItem",
+                    "position":1,
+                    "name":"Home",
+                    "item":"https://ceylondigital.com"
+                },
+                {
+                    "@type":"ListItem",
+                    "position":2,
+                    "name":"Services",
+                    "item":"https://ceylondigital.com/services"
+                },
+                {
+                    "@type":"ListItem",
+                    "position":3,
+                    "name":"Web Development",
+                    "item":"https://ceylondigital.com/web-development"
+                }
+            ]
+        }
+    </script>
+    <style>
+        /* HERO */
+        .blog-hero {
+            position: relative;
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-block: 170px 200px;
+                margin-inline: auto;
+            }
+
+            .section-tag {
+                color: var(--primary);
+                letter-spacing: 3px;
+                font-size: .9rem;
+                text-transform: uppercase;
+                display: none;
+            }
+
+            h1 {
+                font-size: clamp(70px, 8vw, 130px);
+                line-height: .95;
+                margin-top: 30px;
+                font-weight: 700;
+                letter-spacing: -2%;
+            }
+
+            .subtitle {
+                margin-top: 40px;
+                max-width: 550px;
+                color: rgba(255, 255, 255, .55);
+                line-height: 1.9;
+                font-size: 1.1rem;
+            }
+
+            .scroll-cue {
+                position: absolute;
+                left: 8vw;
+                bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                display: none;
+
+                span {
+                    font-size: .75rem;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, .4);
+                }
+
+                .line {
+                    width: 1px;
+                    height: 80px;
+                    background: rgba(255, 255, 255, .1);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: var(--primary);
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    box-shadow:
+                        0 0 10px var(--primary),
+                        0 0 30px var(--primary);
+                    animation: scrollDot 2s infinite ease;
+                }
+            }
+        }
+
+        @keyframes scrollDot {
+            0% {
+                top: -10px;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+
+        /* FEATURED POST */
+        .featured {
+            padding: 0 8vw 40px;
+
+            .featured-container {
+                max-width: 1440px;
+                margin: auto;
+            }
+
+            .featured-card {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                gap: 50px;
+                padding: 50px;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.02);
+                transition: .4s;
+            }
+
+            .featured-card:hover {
+                transform: translateY(-8px);
+                border-color: var(--primary);
+            }
+
+            .featured-img {
+                height: 420px;
+                border-radius: 20px;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .featured-meta {
+                color: rgba(255, 255, 255, .4);
+                font-size: .85rem;
+                margin-bottom: 10px;
+            }
+
+            .featured-title {
+                font-size: 2.6rem;
+                margin-bottom: 20px;
+            }
+
+            .featured-text {
+                color: rgba(255, 255, 255, .6);
+                line-height: 1.8;
+                margin-bottom: 20px;
+            }
+
+            .tag {
+                color: var(--primary);
+                letter-spacing: 2px;
+                font-size: .8rem;
+                text-decoration: none;
+            }
+        }
+
+        /* STACKED POSTS */
+        .blog-section {
+            padding: 80px 8vw 140px;
+        }
+
+        .blog-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .blog-card {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 40px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 26px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            /* background: rgba(255, 255, 255, 0.02); */
+            transition: .35s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+        }
+
+        .thumb {
+            height: 220px;
+            border-radius: 18px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .meta {
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .4);
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .excerpt {
+            color: rgba(255, 255, 255, .6);
+            line-height: 1.7;
+        }
+
+        .label {
+            margin-top: 15px;
+            display: inline-block;
+            font-size: .75rem;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        @media(max-width:900px) {
+
+            .featured-card,
+            .blog-card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+        /* NEWSLETTER */
+        .newsletter {
+            position: relative;
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-inline: auto;
+                padding: 100px 0;
+                text-align: center;
+
+                .section-tag {
+                    color: var(--primary);
+                    letter-spacing: 4px;
+                    font-size: var(--p-size);
+                    display: inline-block;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+
+                .heading {
+                    font-size: clamp(70px, 8vw, 130px);
+                    line-height: .95;
+                    letter-spacing: -3px;
+                    font-weight: 700;
+                }
+
+                .description {
+                    max-width: 550px;
+                    color: var(--text-dim);
+                    font-size: var(--p-size);
+                    margin-block: 30px;
+                    margin-inline: auto;
+                }
+
+                form {
+                    max-width: 600px;
+                    display: flex;
+                    gap: 15px;
+                    margin-top: 40px;
+                    margin-inline: auto;
+                }
+
+                input {
+                    flex: 1;
+                    padding: 15px;
+                    border-radius: 12px;
+                    border: 1px solid rgba(255, 255, 255, .2);
+                    background: transparent;
+                    color: #fff;
+                }
+
+                button {
+                    padding: 15px 30px;
+                    border: none;
+                    background: var(--primary);
+                    color: #fff;
+                    border-radius: 12px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+
+        .cta-section {
+            position: relative;
+            padding: 0 8vw;
+            display: none;
+
+            .container {
+                max-width: 1440px;
+                margin-inline: auto;
+                padding: 100px 0;
+                text-align: center;
+
+                .section-tag {
+                    color: var(--primary);
+                    letter-spacing: 4px;
+                    font-size: var(--p-size);
+                    display: inline-block;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+
+                .heading {
+                    font-size: clamp(70px, 8vw, 130px);
+                    line-height: .95;
+                    letter-spacing: -3px;
+                    font-weight: 700;
+                }
+
+                .description {
+                    max-width: 550px;
+                    color: var(--text-dim);
+                    font-size: var(--p-size);
+                    margin-block: 30px;
+                    margin-inline: auto;
+                }
+
+                .cta {
+                    display: inline-block;
+                    margin-top: 45px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <div class="light" id="light"></div>
+
+    <div class="preloader">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="ring"></div>
+        <div class="center">
+            <div class="logo">Zoura Labs</div>
+            <div class="percent"><span id="percent">0</span>%</div>
+        </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+    <div class="glow-line"></div>
+
+
+    <div class="social-rail">
+        <a href="#" aria-label="X (Twitter)">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a href="#" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+        </a>
+    </div>
+
+
+    <header class="navbar">
+        <nav class="container">
+            <!-- LEFT -->
+            <a href="/" class="logo" aria-label="Zoura Labs homepage">
+                <!-- Zoura Labs -->
+                <img src="/assets/icons/logo.png" alt="Company Logo">
+            </a>
+
+            <!-- CENTER LINKS -->
+            <div class="nav-links">
+                <a href="/" class="nav-link" aria-label="Zoura Labs Homepage">
+                    Home
+                    <span class="tooltip">Homepage</span>
+                </a>
+
+                <a href="/work/" class="nav-link" aria-label="View Zoura Labs portfolio work">
+                    Work
+                    <span class="tooltip">Selected projects & case studies</span>
+                </a>
+
+                <a href="/services/" class="nav-link" aria-label="Explore Zoura Labs services">
+                    Services
+                    <span class="tooltip">Full range of digital services</span>
+                </a>
+
+                <a href="/about/" class="nav-link" aria-label="Learn about Zoura Labs">
+                    About
+                    <span class="tooltip">Who we are & how we work</span>
+                </a>
+
+                <a href="/blog/" class="nav-link active" aria-label="Read Zoura Labs blog articles">
+                    Blog
+                    <span class="tooltip">Insights, updates & thinking</span>
+                </a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="nav-right">
+                <a href="tel:+94767855906" class="nav-phone" aria-label="Call Zoura Labs at +94 76 785 5906">
+
+                    <span class="dot"></span>
+                    +94 76 785 5906
+                    <span class="tooltip">Speak directly with our team</span>
+
+                </a>
+
+                <a href="/contact/" class="nav-btn" aria-label="Start a project with Zoura Labs">
+                    Let's Talk
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- HERO -->
+        <section class="blog-hero">
+            <div class="container">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li aria-current="page">Blog</li>
+                    </ol>
+                </nav>
+
+                <p class="section-tag">Insights & Articles</p>
+                <h1 class="heading">Digital Insights & Strategies</h1>
+                <p class="subtitle">
+                    We share insights, guides, and strategies on web development, mobile apps, custom software,
+                    AI automation, SEO, branding, and digital marketing to help businesses build and grow in the digital world.
+                </p>
+            </div>
+
+            <div class="scroll-cue">
+                <span>Scroll</span>
+                <div class="line">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED POST -->
+        <section class="featured">
+            <div class="featured-container">
+
+                <div class="featured-card">
+
+                    <div class="featured-img" style="background-image:url('/assets/img/blog_1.png')">
+                    </div>
+
+                    <div>
+                        <div class="featured-meta">
+                            Featured Article · June 2026 · UX Strategy · 5 min read
+                        </div>
+
+                        <h2 class="featured-title">
+                            Why Most Business Websites Fail to Convert (Even With Good Design)
+                        </h2>
+
+                        <p class="featured-text">
+                            Most websites fail due to unclear messaging, weak hierarchy, and missing conversion strategy.
+                            Many business owners assume design is the issue, but the real problem is how users are guided.
+                        </p>
+
+                        <a href="/blog/ux/why-websites-fail-to-convert" class="tag">READ FEATURED</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- STACKED BLOG -->
+        <section class="blog-section">
+            <div class="blog-container">
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200')"></div>
+                    <div>
+                        <div class="meta">Engineering · June 2026 · 5 min read</div>
+                        <h3 class="title">How We Build Scalable Frontend Systems for Real Clients</h3>
+                        <p class="excerpt">
+                            A breakdown of modular architecture, reusable components, and performance-first React systems used in production.
+                            This approach ensures long-term scalability and easier maintenance for growing products.
+                        </p>
+                        <a href="/blog/development/scalable-frontend-systems" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200')"></div>
+                    <div>
+                        <div class="meta">Branding · May 2026 · 5 min read</div>
+                        <h3 class="title">Brand Identity is Not a Logo — It’s a Complete System</h3>
+                        <p class="excerpt">
+                            Branding is consistency, tone, and experience—not just visuals.
+                            A strong brand creates recognition across every customer touchpoint.
+                        </p>
+                        <a href="/blog/branding/brand-identity-system" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200')"></div>
+                    <div>
+                        <div class="meta">Design · May 2026 · 5 min read</div>
+                        <h3 class="title">UI Design Systems That Actually Scale in Real Products</h3>
+                        <p class="excerpt">
+                            Tokens, spacing rules, typography rhythm, and scalable design architecture.
+                            Most design systems fail because they are not built for real product growth.
+                        </p>
+                        <a href="/blog/design/ui-design-systems-scale" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200')"></div>
+                    <div>
+                        <div class="meta">Marketing · April 2026 · 5 min read</div>
+                        <h3 class="title">SEO in 2026: What Still Works (And What’s Dead)</h3>
+                        <p class="excerpt">
+                            SEO is now about intent, structure, and authority—not keywords.
+                            Search engines prioritize usefulness and content depth over repetition.
+                        </p>
+                        <a href="/blog/seo/seo-in-2026-what-works" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1555421689-491a97ff2040?w=1200')"></div>
+                    <div>
+                        <div class="meta">UX · 2026 · 5 min read</div>
+                        <h3 class="title">The Psychology Behind High-Converting Websites</h3>
+                        <p class="excerpt">
+                            How users think, scroll, and decide before they convert.
+                            Small UX decisions can significantly change user behavior and engagement.
+                        </p>
+                        <a href="/blog/ux/psychology-high-converting-websites" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200')"></div>
+                    <div>
+                        <div class="meta">Growth · 2026 · 5 min read</div>
+                        <h3 class="title">Why Your Website Gets Traffic but No Leads</h3>
+                        <p class="excerpt">
+                            Traffic without conversion usually means broken messaging or weak CTAs.
+                            Many websites attract visitors but fail to guide them toward action.
+                        </p>
+                        <a href="/blog/growth/traffic-without-leads" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200')"></div>
+                    <div>
+                        <div class="meta">Business · 2026 · 5 min read</div>
+                        <h3 class="title">How to Build a Website That Actually Generates Leads</h3>
+                        <p class="excerpt">
+                            Funnels, CTAs, landing pages, and trust-building systems.
+                            A website should act as a sales tool, not just an online brochure.
+                        </p>
+                        <a href="/blog/business/website-lead-generation-guide" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200')"></div>
+                    <div>
+                        <div class="meta">Case Study · 2026 · 5 min read</div>
+                        <h3 class="title">How We Increased Website Conversions by 240% for a Client</h3>
+                        <p class="excerpt">
+                            Real breakdown of UX and CRO changes that delivered results.
+                            This case study shows how small improvements can lead to massive growth.
+                        </p>
+                        <a href="/blog/case-study/increased-conversions-240" class="label">READ MORE</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <div class="container">
+                <span class="section-tag">Newsletter</span>
+                <h2 class="heading">Stay Updated</h2>
+                <p class="description">Get latest insights and articles.</p>
+
+                <form action="" method="post">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+        <section class="cta-section">
+            <div class="container">
+                <span class="section-tag">Start a Project</span>
+                <h2 class="heading">Let’s build something meaningful</h2>
+                <p class="description">Want insights like this for your business? Let’s design something that actually performs.</p>
+                <a href="/contact/" class="cta cta--primary">Start a Project</a>
+            </div>
+        </section>
+
+
+
+
+        <button class="back-to-top" id="backToTop">↑</button>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-watermark" aria-hidden="true">
+                Zoura Labs
+            </div>
+
+            <div class="footer-top">
+                <!-- Brand / Intro -->
+                <section class="footer-brand" aria-labelledby="footer-connect-title">
+                    <h2 id="footer-connect-title" class="section-tag">
+                        Let's Connect
+                    </h2>
+
+                    <p class="footer-lead">
+                        Have a project in mind? We'd love to hear about it.
+                    </p>
+
+                    <address>
+                        <a class="footer-email" href="mailto:hello@zouralabs.com?subject=Project%20Inquiry%20-%20Zoura%20Labs&amp;body=Hello%20Zoura%20Labs,%0D%0A%0D%0AI%20would%20like%20to%20inquire%20about%20your%20services%20and%20discuss%20a%20potential%20project.%0D%0A%0D%0AProject%20details:%0D%0A-%20Type%20of%20project:%0D%0A-%20Requirements:%0D%0A-%20Timeline:%0D%0A-%20Budget:%0D%0A-%20Phone%20number%20(optional):%0D%0A%0D%0APlease%20let%20me%20know%20your%20availability.%0D%0A%0D%0ARegards,%0D%0A%5BYour%20Name%5D">
+                            hello@zouralabs.com
+                        </a>
+                    </address>
+
+                    <p>
+                        Building premium websites, brands and digital experiences for ambitious businesses.
+                    </p>
+                </section>
+
+                <!-- Footer Links -->
+                <!-- <nav class="footer-links" aria-label="Footer navigation"> -->
+                <section class="footer-column" aria-labelledby="nav-title">
+                    <h3 id="nav-title">Navigation</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/work/">Work</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="services-title">
+                    <h3 id="services-title">Services</h3>
+                    <ul>
+                        <li><a href="/services/web-mobile/">Web & Apps</a></li>
+                        <li><a href="/services/business-systems/">Systems</a></li>
+                        <li><a href="/services/ai-automation/">AI</a></li>
+                        <li><a href="/services/digital-marketing/">Marketing</a></li>
+                        <li><a href="/services/branding-design/">Branding & Design</a></li>
+                        <li><a href="/services/ecommerce/">Commerce</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column socials" aria-labelledby="social-title">
+                    <h3 id="social-title">Social</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Behance</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="location-title">
+                    <h3 id="location-title">Location</h3>
+                    <ul>
+                        <li>Colombo, Sri Lanka</li>
+                        <li>Working Worldwide</li>
+                        <li>GMT +5:30</li>
+                    </ul>
+
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>7:00 AM – 10:00 PM</li>
+                        <li>Daily (GMT +5:30)</li>
+                    </ul>
+                </section>
+                <!-- </nav> -->
+            </div>
+
+            <!-- Bottom legal area -->
+            <div class="footer-bottom">
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script> Zoura Labs. All Rights Reserved.
+                </p>
+
+                <nav aria-label="Legal links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="/terms/">Terms of Service</a>
+                </nav>
+
+                <p>Built by Zoura Labs · Sri Lanka</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="/assets/js/global.js"></script>
+    <script>
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                gsap.to(".scroll-cue", {
+                    opacity: 0,
+                    y: 20,
+                    duration: .3
+                });
+            } else {
+                gsap.to(".scroll-cue", {
+                    opacity: 1,
+                    y: 0,
+                    duration: .3
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

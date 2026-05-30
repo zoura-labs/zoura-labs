@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spring Boot vs Micronaut | Zoura Labs Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: "Inter", sans-serif;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 120px 20px 80px;
+            background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 25px #00ffcc;
+        }
+
+        .hero .spring {
+            color: #00ff88;
+        }
+
+        .hero .micro {
+            color: #00bfff;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        .date {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #00ffcc;
+            border-left: 4px solid #00ffcc;
+            padding-left: 10px;
+            margin-top: 60px;
+        }
+
+        .full-img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 30px 0;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+        }
+
+        .comparison {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .column {
+            flex: 1;
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+        }
+
+        .column h3 {
+            color: #00bfff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #555;
+            border-top: 1px solid #222;
+            font-size: 0.9rem;
+        }
+
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <h1><span class="spring">Spring Boot</span> vs <span class="micro">Micronaut</span></h1>
+        <p class="subtitle">Choosing the Right Framework for Modern Java Microservices</p>
+        <p class="date">Jun 27, 2026</p>
+    </header>
+
+    <main class="content">
+        <section>
+            <p>The Java ecosystem has never been richer — and never more contested. If you're building microservices today, two frameworks dominate the conversation: Spring Boot and Micronaut. Both are production-grade, both have strong communities, and both can absolutely get the job done. But they were built with very different philosophies, and that difference shows up exactly when it matters most.</p>
+            <h2>A Tale of Two Philosophies</h2>
+            <p>Spring Boot is the evolution of an ecosystem that's been running Java production workloads since 2003. It's convention-over-configuration taken to its logical extreme — a vast, opinionated platform where almost anything you need has already been wired up for you. It relies heavily on runtime reflection and classpath scanning to do its magic.</p>
+            <p>Micronaut, released in 2018 by the creators of Grails, was built from the ground up with one question in mind: what if we did all of that at compile time instead? No reflection. No classpath scanning. No proxy classes generated on the fly. Dependency injection, AOP, and configuration are all resolved during the build.</p>
+            <img src="images/philosophy.png" alt="Spring Boot vs Micronaut Philosophy" class="full-img" />
+        </section>
+
+        <section>
+            <h2>Startup Time and Memory</h2>
+            <p>This is where Micronaut's compile-time model shines most visibly. A minimal Micronaut service typically starts in under 200ms and sits comfortably under 100MB of heap. The same Spring Boot application — even a lean one — usually takes 1–3 seconds to start and consumes 200–400MB depending on auto-configurations.</p>
+            <img src="images/startup.png" alt="Startup Time Comparison" class="full-img" />
+        </section>
+
+        <section>
+            <h2>Developer Experience</h2>
+            <p>Spring Boot wins here, and it's not particularly close — at least for greenfield projects. The Spring ecosystem is vast and mature, covering almost every integration pattern you'll encounter. Micronaut’s compile-time errors, however, are a genuine productivity boost — surfacing misconfigurations at build time instead of runtime.</p>
+            <img src="images/dev-experience.png" alt="Developer Experience" class="full-img" />
+        </section>
+
+        <section>
+            <h2>Testing</h2>
+            <p>Both frameworks support unit and integration testing well, but their approaches differ. Spring Boot’s @SpringBootTest spins up the full application context, which is powerful but slow. Micronaut starts fast, so spinning up the full application in a test is far less painful.</p>
+            <img src="images/testing.png" alt="Testing Comparison" class="full-img" />
+        </section>
+
+        <section>
+            <h2>Reactive and Cloud-Native Support</h2>
+            <p>Both frameworks support reactive programming and cloud-native patterns. Spring Cloud is the more mature option if you're deep in a Spring ecosystem, while Micronaut’s built-in support for Consul, Eureka, AWS, GCP, and Azure is solid and requires less boilerplate configuration.</p>
+        </section>
+
+        <section>
+            <h2>The Bottom Line</h2>
+            <div class="comparison">
+                <div class="column">
+                    <h3>When to Choose Spring Boot</h3>
+                    <ul>
+                        <li>Your team already knows Spring well</li>
+                        <li>You need broad ecosystem coverage</li>
+                        <li>Startup time is irrelevant</li>
+                        <li>Existing Spring infrastructure and standards</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>When to Choose Micronaut</h3>
+                    <ul>
+                        <li>Startup time and memory are critical</li>
+                        <li>You want compile-time safety</li>
+                        <li>You’re targeting GraalVM native images</li>
+                        <li>You’re building greenfield microservices</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="closing">Spring Boot is the safe, well-worn path. Micronaut is the sharper tool for specific jobs. Picking the right tool for the constraint at hand — rather than the familiar one by default — is what separates thoughtful engineering from habit.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Zoura Labs — Engineering Tomorrow’s Digital Experiences</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Glow animation for headings
+        document.querySelectorAll("h1, h2").forEach(el => {
+            el.addEventListener("mouseenter", () => {
+                el.style.textShadow = "0 0 25px #00ffcc";
+            });
+            el.addEventListener("mouseleave", () => {
+                el.style.textShadow = "none";
+            });
+        });
+
+        // Smooth fade-in for sections
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        });
+        sections.forEach(sec => observer.observe(sec));
+
+    </script>
+</body>
+
+</html>

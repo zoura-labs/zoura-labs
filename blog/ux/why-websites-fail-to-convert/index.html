@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Article · UX Strategy</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --bg: #0b0b10;
+            --surface: rgba(255, 255, 255, 0.03);
+            --surface-2: rgba(255, 255, 255, 0.06);
+            --text: rgba(255, 255, 255, 0.88);
+            --muted: rgba(255, 255, 255, 0.55);
+            --accent: #7b61ff;
+            --cyan: #00b4d8;
+        }
+
+        /* GLOBAL */
+        body {
+            font-family: "Space Grotesk", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* SECTION SPACING (premium breathing room) */
+        section {
+            padding: 100px 8vw;
+        }
+
+        /* HEADER */
+        .blog-header {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .blog-header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.03em;
+        }
+
+        .blog-header .meta {
+            color: var(--muted);
+        }
+
+        /* HERO (more editorial, less blocky) */
+        .hero-banner {
+            background: radial-gradient(circle at top, rgba(123, 97, 255, 0.25), transparent 60%),
+                radial-gradient(circle at bottom, rgba(0, 180, 216, 0.15), transparent 60%);
+            text-align: left;
+        }
+
+        .hero-banner h2 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            max-width: 800px;
+        }
+
+        /* BLOG CONTENT CONTAINER */
+        .container {
+            max-width: 820px;
+        }
+
+        /* HEADINGS */
+        .blog-content h2 {
+            margin-top: 3rem;
+            font-size: 1.4rem;
+            color: white;
+            position: relative;
+        }
+
+        .blog-content h2::before {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background: var(--accent);
+            position: absolute;
+            left: -40px;
+            top: 50%;
+        }
+
+        /* PARAGRAPH */
+        .blog-content p {
+            color: var(--muted);
+        }
+
+        /* BLOCKQUOTE (premium editorial card) */
+        .blog-content blockquote {
+            background: var(--surface);
+            border: 1px solid rgba(123, 97, 255, 0.25);
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 14px;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* CHECKLIST (modern UI cards) */
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* CTA BUTTON (premium glow) */
+        .cta {
+            background: linear-gradient(135deg, var(--accent), var(--cyan));
+            color: white;
+            padding: 12px 18px;
+            border-radius: 12px;
+            border: none;
+            display: inline-block;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 30px rgba(123, 97, 255, 0.2);
+        }
+
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(123, 97, 255, 0.35);
+        }
+
+        /* SIDEBAR (glass card) */
+        .sidebar {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* LINKS */
+        .sidebar a,
+        .blog-content a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER STYLE HARMONIZATION */
+        .footer {
+            background: radial-gradient(circle at top, rgba(123, 97, 255, 0.1), transparent 60%);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    
+    <!-- Header -->
+    <header class="blog-header">
+        <section>
+            <div class="container">
+                <h1>Why Most Business Websites Fail to Convert (Even With Good Design)</h1>
+                <p class="meta">Featured Article · June 2026 · UX Strategy · 5 min read</p>
+                <button class="cta">Subscribe for Insights</button>
+            </div>
+        </section>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <h2>End-to-End Digital Solutions for Modern Businesses</h2>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section>
+        <main class="blog-content container">
+            <p class="intro">
+                Most websites fail due to unclear messaging, weak hierarchy, and missing conversion strategy. Many business owners assume design is the issue, but the real problem is how users are guided.
+            </p>
+
+            <h2>Clarity Beats Creativity</h2>
+            <p>Vague headlines and jargon confuse visitors. Replace “Innovative Solutions” with “Websites That Drive Sales.” Clear messaging builds trust and sets expectations instantly.</p>
+
+            <h2>Guide Users, Don’t Distract Them</h2>
+            <p>Logical flow matters: hero → services → proof → CTA. Keep navigation minimal and focused. Every click should feel intentional and lead closer to conversion.</p>
+
+            <h2>Design Without Strategy = Decoration</h2>
+            <p>CTAs, trust signals, and benefit‑driven copy outperform visuals alone. Example CTA: “Start Your Project Today” vs. “Learn More.” Strategy turns design into results.</p>
+
+            <blockquote>
+                “Good design is wasted if users don’t know what to do next.”
+            </blockquote>
+
+            <h2>Trust Signals Matter</h2>
+            <p>Visitors look for proof before committing. Case studies, testimonials, and recognizable client logos build credibility and reduce hesitation.</p>
+
+            <h2>Speed and Accessibility</h2>
+            <p>A beautiful site that loads slowly or isn’t mobile‑friendly will lose conversions. Optimize performance and ensure accessibility compliance for all users.</p>
+
+            <h2>Analytics and Iteration</h2>
+            <p>Conversion strategy isn’t static. Use analytics tools to track user behavior, run A/B tests, and refine CTAs and layouts continuously.</p>
+
+            <h2>Practical Checklist</h2>
+            <ul class="checklist">
+                <li>Clear headline with benefit</li>
+                <li>Logical content hierarchy</li>
+                <li>Strong, visible CTA</li>
+                <li>Trust signals (reviews, logos)</li>
+                <li>Fast load speed</li>
+                <li>Mobile‑friendly design</li>
+                <li>Analytics + A/B testing</li>
+            </ul>
+
+            <h2>Case Study: A Local Agency</h2>
+            <p>One Sri Lankan agency redesigned its homepage with clearer messaging, simplified navigation, and stronger CTAs. Within 3 months, conversions rose by 42%.</p>
+
+            <h2>Action Plan for Business Owners</h2>
+            <ol>
+                <li>Audit your current site for clarity and hierarchy.</li>
+                <li>Identify missing trust signals and add them.</li>
+                <li>Test CTA wording and placement.</li>
+                <li>Measure results with analytics and iterate monthly.</li>
+            </ol>
+
+            <p class="conclusion">
+                Conversion comes from clarity, hierarchy, and strategy—not just aesthetics.
+            </p>
+            <a href="#" class="cta secondary">Read More UX Insights →</a>
+        </main>
+    </section>
+
+    <!-- Sidebar -->
+    <section>
+        <aside class="sidebar container">
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="#">5 UX Mistakes That Kill Conversions</a></li>
+                <li><a href="#">How to Write Headlines That Sell</a></li>
+                <li><a href="#">The Psychology of CTAs</a></li>
+            </ul>
+            <form class="newsletter">
+                <label for="email">Get weekly UX strategy tips:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </aside>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <section>
+            <div class="container">
+                <p>© <script>document.write(new Date().getFullYear())</script> Zoura Labs. All Rights Reserved.</p>
+            </div>
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Newsletter form submission
+        document.querySelector(".newsletter").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = document.querySelector("#email").value;
+            if (email) {
+                alert(`Thanks for subscribing, ${email}!`);
+                document.querySelector("#email").value = "";
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+
+        // CTA button click
+        document.querySelectorAll(".cta").forEach
+    </script>
+</body>
+
+</html>

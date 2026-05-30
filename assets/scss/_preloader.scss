@@ -1,0 +1,72 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1010;
+
+    .orb {
+        position: absolute;
+        border-radius: var(--radius-full);
+        filter: blur(120px);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Purple glow (top-right like your original design) */
+    .orb1 {
+        width: 500px;
+        height: 500px;
+        top: -120px;
+        right: -120px;
+        background: var(--primary);
+        opacity: .25;
+    }
+
+    /* Blue glow (bottom-left like your original design) */
+    .orb2 {
+        width: 450px;
+        height: 450px;
+        bottom: -120px;
+        left: -120px;
+        background: var(--primary);
+        opacity: .18;
+    }
+
+    .ring {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top: 2px solid var(--primary);
+        border-right: 2px solid var(--primary);
+        animation: spin 1.2s linear infinite;
+        filter: drop-shadow(0 0 20px rgba(123, 97, 255, .3));
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .center {
+        text-align: center;
+        color: var(--text);
+    }
+
+    .logo {
+        letter-spacing: 4px;
+        font-weight: 700;
+        opacity: .9;
+        text-transform: uppercase;
+    }
+
+    .percent {
+        margin-top: 10px;
+        color: var(--primary);
+    }
+}

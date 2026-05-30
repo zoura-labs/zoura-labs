@@ -1,0 +1,162 @@
+:root {
+    /* Much stronger display scale */
+    --display-size: clamp(4.5rem, 3.5rem + 3vw, 7rem);
+
+    --h1-size: clamp(2.6rem, 2.2rem + 1.8vw, 3.8rem);
+    --h2-size: clamp(2.1rem, 1.8rem + 1.3vw, 3rem);
+    --h3-size: clamp(1.7rem, 1.4rem + 1vw, 2.2rem);
+    --h4-size: clamp(1.4rem, 1.2rem + 0.7vw, 1.8rem);
+    --h5-size: clamp(1.1rem, 1rem + 0.45vw, 1.35rem);
+    --h6-size: clamp(1rem, 0.9rem + 0.25vw, 1.15rem);
+
+    --p-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+    --p-size: .97rem;
+    --small-size: .9rem;
+}
+
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+h4 {
+    font-size: var(--h4-size);
+}
+
+h5 {
+    font-size: var(--h5-size);
+}
+
+h6 {
+    font-size: var(--h6-size);
+}
+
+p {
+    font-size: var(--p-size);
+    letter-spacing: .1px;
+}
+
+
+
+
+:root {
+    --bg: #050505;
+    --bg-soft: #0b1220;
+    --surface: #0f172a;
+    --surface-2: #111c33;
+
+    --border: #1e2a44;
+
+    --text: #e5e7eb;
+    --text-dim: rgba(255, 255, 255, .55);
+
+    --primary: #6F3DFF;
+    --secondary: #8B5CF6;
+    --accent: #06B6D4;
+
+    // --primary: #22C55E;
+    // --secondary: #3DFF6F;
+    // --accent: #38BDF8;
+
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --glow: #22d3ee;
+}
+
+
+:root {
+    /* Micro UI (badges, tags, inputs) */
+    --radius-xs: 6px;
+
+    /* Small UI (buttons, chips) */
+    --radius-sm: 10px;
+
+    /* Default UI (cards, dropdowns) */
+    --radius-md: 14px;
+
+    /* Large surfaces (modals, panels) */
+    --radius-lg: 20px;
+
+    /* Hero sections / big containers */
+    --radius-xl: 28px;
+
+    /* Fully rounded (pills, avatars) */
+    --radius-full: 999px;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   BASE BUTTON (shared)
+========================== */
+.cta {
+    position: relative;
+    width: max-content;
+    padding: 18px 34px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .04);
+    backdrop-filter: blur(10px);
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+
+    will-change: transform;
+    transition: all 0.3s ease, transform 0.25s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* =========================
+   PRIMARY CTA (main focus)
+========================== */
+.cta--primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 5px 30px color-mix(in srgb, var(--primary) 53%, transparent);
+}
+
+/* =========================
+   SECONDARY CTA (muted)
+========================== */
+.cta--secondary {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: rgba(255, 255, 255, .7);
+}
+
+/* hover behavior for secondary only */
+.cta--secondary:hover {
+    border-color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 12%, transparent);
+    color: #fff;
+    box-shadow:
+        0 10px 25px color-mix(in srgb, var(--primary) 35%, transparent),
+        0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+/* optional arrow animation */
+.cta--secondary span {
+    display: inline-block;
+    margin-left: 5px;
+    transition: .3s ease;
+}
+
+.cta--secondary:hover span {
+    transform: translateX(5px);
+}

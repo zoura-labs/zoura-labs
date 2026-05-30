@@ -1,0 +1,98 @@
+<script>
+    const STORAGE_KEY = "preferredCurrency";
+
+    let exchangeRates = {
+        USD_TO_LKR: 300 // fallback
+    };
+
+    // 💱 Fetch live exchange rate (optional API)
+    async function loadExchangeRate() {
+        try {
+            const res = await fetch("https://open.er-api.com/v6/latest/USD");
+            const data = await res.json();
+
+            if (data?.rates?.LKR) {
+                exchangeRates.USD_TO_LKR = data.rates.LKR;
+            }
+        } catch (e) {
+            console.log("Using fallback exchange rate");
+        }
+    }
+
+    function getPrices() {
+        return document.querySelectorAll(".tier-price");
+    }
+
+    // ✨ Smooth counter animation
+    function animateValue(el, start, end, duration) {
+        let startTime = null;
+
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+
+            const value = Math.floor(progress * (end - start) + start);
+
+            el.innerText = el.dataset.prefix + value.toLocaleString() + el.dataset.suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        }
+
+        requestAnimationFrame(step);
+    }
+
+    function setCurrency(currency) {
+        localStorage.setItem(STORAGE_KEY, currency);
+
+        const prices = getPrices();
+
+        prices.forEach(el => {
+            const usd = parseFloat(el.getAttribute("data-usd"));
+            if (!usd) return;
+
+            let newValue, prefix, suffix;
+
+            if (currency === "USD") {
+                newValue = usd;
+                prefix = "$";
+                suffix = "+";
+            } else {
+                newValue = Math.round(usd * exchangeRates.USD_TO_LKR);
+                prefix = "LKR ";
+                suffix = "+";
+            }
+
+            // store formatting for animation
+            el.dataset.prefix = prefix;
+            el.dataset.suffix = suffix;
+
+            animateValue(el, 0, newValue, 600);
+        });
+
+        highlightActive(currency);
+    }
+
+    function highlightActive(currency) {
+        document.querySelectorAll("button[data-currency]").forEach(btn => {
+            btn.classList.toggle("active", btn.dataset.currency === currency);
+        });
+    }
+
+    // 🌍 basic auto-detect currency
+    function detectCurrency() {
+        const lang = navigator.language || "en-US";
+
+        if (lang.includes("LK")) return "LKR";
+        return "USD";
+    }
+
+    window.addEventListener("DOMContentLoaded", async () => {
+        await loadExchangeRate();
+
+        const saved = localStorage.getItem(STORAGE_KEY) || detectCurrency();
+
+        setCurrency(saved);
+    });
+</script>

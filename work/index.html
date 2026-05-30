@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Work | Web, App & Software Development Projects | Zoura Labs</title>
+    <meta name="description" content="Explore Zoura Labs' work in web design, mobile app development, custom software, AI solutions, SEO, and digital marketing. We build real-world digital products that help businesses grow, scale, and automate operations.">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://zouralabs.com/work/#webpage",
+          "name": "Zoura Labs Work & Portfolio",
+          "url": "https://zouralabs.com/work",
+          "description": "Showcase of web development, design, and digital solutions built by Zoura Labs.",
+          "isPartOf": {
+            "@id": "https://zouralabs.com/#website"
+          },
+          "about": {
+              "@id": "https://zouralabs.com/#organization"
+            },
+        
+            "mainEntity": {
+            "@type": "ItemList",
+            "name": "Zoura Labs Projects",
+            "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "CreativeWork",
+                  "@id": "https://zouralabs.com/work/restaurant-website-redesign",
+                  "name": "Restaurant Website Redesign",
+                  "description": "Modern redesign with SEO optimization and improved user experience.",
+                  "image": "https://zouralabs.com/assets/work/restaurant.jpg",
+                  "creator": {
+                    "@type": "Organization",
+                    "name": "Zoura Labs"
+                },
+                  "about": {
+                    "@type": "Service",
+                    "name": "Web Development"
+                }
+                }
+            }
+            ]
+        }
+        }
+    </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://zouralabs.com/work/#collectionpage",
+          "name": "Zoura Labs Work & Portfolio",
+          "url": "https://zouralabs.com/work",
+          "description": "Showcase of web development, design, and digital solutions built by Zoura Labs.",
+        
+          "isPartOf": {
+            "@id": "https://zouralabs.com/#website"
+          },
+        
+          "about": {
+            "@id": "https://zouralabs.com/#organization"
+          },
+        
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Zoura Labs Projects",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "CreativeWork",
+                  "@id": "https://zouralabs.com/work/restaurant-website-redesign",
+                  "name": "Restaurant Website Redesign",
+                  "description": "Modern redesign with SEO optimization and improved user experience.",
+                  "image": "https://zouralabs.com/assets/work/restaurant.jpg",
+                  "creator": {
+                    "@id": "https://zouralabs.com/#organization"
+                  },
+                  "about": {
+                    "@type": "Thing",
+                    "name": "Web Development"
+                  }
+                }
+              }
+            ]
+          }
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "@id": "https://zouralabs.com/work/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://zouralabs.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Work",
+              "item": "https://zouralabs.com/work"
+            }
+          ]
+        }
+    </script>
+
+    <style>
+        /* =========================
+           HERO
+        ========================= */
+        .work-hero {
+            position: relative;
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-block: 170px 100px;
+                margin-inline: auto;
+            }
+
+            .section-tag {
+                color: var(--primary);
+                letter-spacing: 3px;
+                font-size: .9rem;
+                text-transform: uppercase;
+                display: none;
+            }
+
+            .heading {
+                /* max-width: 1440px; */
+                font-size: clamp(70px, 8vw, 130px);
+                line-height: .95;
+                margin-top: 30px;
+                font-weight: 700;
+                letter-spacing: -2%;
+            }
+
+            /* .heading span {
+                color: var(--primary);
+                text-shadow:
+                    0 0 10px rgba(111, 61, 255, 0.4),
+                    0 0 30px rgba(111, 61, 255, 0.25);
+            } */
+
+            .subtitle {
+                margin-top: 40px;
+                max-width: 550px;
+                color: rgba(255, 255, 255, .55);
+                line-height: 1.9;
+                font-size: var(--p-size);
+            }
+        }
+
+        /* =========================
+   2 COLUMN LAYOUT
+========================= */
+
+        .work-layout {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-inline: auto;
+                padding: 100px 0 200px;
+                display: grid;
+                grid-template-columns: 260px 1fr;
+                gap: 80px;
+
+            }
+        }
+
+        /* =========================
+   FILTER SIDEBAR
+========================= */
+
+        .filter-sidebar {
+            position: sticky;
+            top: 15%;
+            height: fit-content;
+        }
+
+        .filter-heading {
+            font-size: var(--h6-size);
+            opacity: 1;
+            margin-bottom: 25px;
+            font-weight: normal;
+            text-transform: capitalize;
+        }
+
+        .filter-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .filter-btn {
+            width: 100%;
+
+            text-align: left;
+            background: transparent;
+
+            border: none;
+
+            color: rgba(255, 255, 255, .4);
+
+            font-size: var(--p-size);
+
+            cursor: pointer;
+
+            padding: 6px 0;
+
+            transition: .25s ease;
+            position: relative;
+        }
+
+        /* hover */
+        .filter-btn:hover {
+            color: white;
+        }
+
+        /* active state */
+        .filter-btn.active {
+            color: var(--primary);
+        }
+
+        /* accessibility focus */
+        .filter-btn:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 4px;
+            border-radius: 6px;
+        }
+
+        /* optional dot indicator */
+        .filter-btn::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: transparent;
+
+            display: inline-block;
+            margin-right: 10px;
+
+            transform: translateY(-1px);
+            transition: .2s;
+        }
+
+        .filter-btn.active::before {
+            background: var(--primary);
+        }
+
+        /* =========================
+   GRID
+========================= */
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 40px;
+        }
+
+        /* =========================
+   PROJECT CARD
+========================= */
+
+        .project-card {
+            text-decoration: none;
+            color: white;
+            display: block;
+
+            transition: .5s ease;
+        }
+
+        /* hide animation for filtering */
+        .project-card.hide {
+            opacity: 0;
+            display: none;
+            transform: translateY(20px);
+            pointer-events: none;
+            position: absolute;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* =========================
+   IMAGE
+========================= */
+
+        .project-media {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 34px;
+            background: #0f0f0f;
+        }
+
+        .project-media img {
+            width: 100%;
+            display: block;
+
+            height: 300px;
+            object-fit: cover;
+
+            transition: 1s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+   TEXT CONTENT
+========================= */
+
+        .project-info {
+            margin-top: 28px;
+        }
+
+        .project-tag {
+            display: inline-flex;
+
+            padding: 10px 16px;
+            border-radius: 999px;
+
+            background: rgba(123, 97, 255, .12);
+            border: 1px solid rgba(123, 97, 255, .25);
+
+            color: var(--primary);
+            font-size: var(--p-size);
+        }
+
+        .project-title {
+            margin-top: 18px;
+
+            font-size: var(--h3-size);
+            line-height: .95;
+        }
+
+        .project-excerpt {
+            margin-top: 16px;
+
+            max-width: 500px;
+
+            color: rgba(255, 255, 255, .55);
+            line-height: 1.7;
+            font-size: var(--p-size);
+        }
+
+        /* hover emphasis */
+        .project-card:hover .project-title {
+            color: var(--primary);
+            transition: .3s;
+        }
+
+        /* =========================
+   RESPONSIVE
+========================= */
+
+        @media (max-width: 1000px) {
+
+            .work-layout {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .filter-sidebar {
+                position: relative;
+                top: auto;
+            }
+
+            .filter-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .filter-btn {
+                width: auto;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-media img {
+                height: 420px;
+            }
+
+        }
+
+
+
+
+
+
+        .clients {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-inline: auto;
+                padding: 30px 0 100px;
+            }
+
+            .section-tag {
+                color: var(--primary);
+                letter-spacing: 4px;
+                font-size: var(--p-size);
+                display: block;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .heading {
+                font-size: clamp(70px, 8vw, 130px);
+                font-size: var(--h1-size);
+                line-height: .92;
+                letter-spacing: -2px;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 100px;
+            }
+
+            .clients-row {
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .clients-row span {
+                font-size: clamp(30px, 3vw, 60px);
+                opacity: .25;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .cta-section {
+            position: relative;
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-inline: auto;
+                padding: 100px 0;
+                text-align: center;
+
+                .section-tag {
+                    color: var(--primary);
+                    letter-spacing: 4px;
+                    font-size: var(--p-size);
+                    display: inline-block;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                }
+
+                .heading {
+                    font-size: clamp(70px, 8vw, 130px);
+                    line-height: .95;
+                    letter-spacing: -3px;
+                    font-weight: 700;
+                }
+
+                .description {
+                    max-width: 550px;
+                    color: var(--text-dim);
+                    font-size: var(--p-size);
+                    margin-block: 30px;
+                    margin-inline: auto;
+                }
+
+                .cta {
+                    display: inline-block;
+                    margin-top: 45px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <div class="light" id="light"></div>
+
+    <div class="preloader">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="ring"></div>
+        <div class="center">
+            <div class="logo">Zoura Labs</div>
+            <div class="percent"><span id="percent">0</span>%</div>
+        </div>
+    </div>
+
+
+    <!-- BACKGROUND -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+    <div class="glow-line"></div>
+
+
+    <div class="social-rail">
+        <a href="#" aria-label="X (Twitter)">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a href="#" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+        </a>
+    </div>
+
+
+
+    <header class="navbar">
+        <nav class="container">
+            <!-- LEFT -->
+            <a href="/" class="logo" aria-label="Zoura Labs homepage">
+                <!-- Zoura Labs -->
+                <img src="/assets/icons/logo.png" alt="Company Logo">
+            </a>
+
+            <!-- CENTER LINKS -->
+            <div class="nav-links">
+                <a href="/" class="nav-link" aria-label="Zoura Labs Homepage">
+                    Home
+                    <span class="tooltip">Homepage</span>
+                </a>
+
+                <a href="/work/" class="nav-link active" aria-label="View Zoura Labs portfolio work">
+                    Work
+                    <span class="tooltip">Selected projects & case studies</span>
+                </a>
+
+                <a href="/services/" class="nav-link" aria-label="Explore Zoura Labs services">
+                    Services
+                    <span class="tooltip">Full range of digital services</span>
+                </a>
+
+                <a href="/about/" class="nav-link" aria-label="Learn about Zoura Labs">
+                    About
+                    <span class="tooltip">Who we are & how we work</span>
+                </a>
+
+                <a href="/blog/" class="nav-link" aria-label="Read Zoura Labs blog articles">
+                    Blog
+                    <span class="tooltip">Insights, updates & thinking</span>
+                </a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="nav-right">
+                <a href="tel:+94767855906" class="nav-phone" aria-label="Call Zoura Labs at +94 76 785 5906">
+
+                    <span class="dot"></span>
+                    +94 76 785 5906
+                    <span class="tooltip">Speak directly with our team</span>
+
+                </a>
+
+                <a href="/contact/" class="nav-btn" aria-label="Start a project with Zoura Labs">
+                    Let's Talk
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <!-- HERO -->
+        <header class="work-hero">
+            <div class="container">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li aria-current="page">Work</li>
+                    </ol>
+                </nav>
+
+                <p class="section-tag">Featured Work</p>
+                <h1 class="heading">Selected <span>Work & Impact</span></h1>
+                <p class="subtitle">
+                    A showcase of our work in web development, mobile apps, custom software, AI automation, branding,
+                    and digital marketing — built to solve real business problems and drive measurable results.
+                </p>
+            </div>
+        </header>
+
+
+        <!-- FILTER + CONTENT WRAP -->
+        <section class="work-layout" aria-label="Portfolio projects section">
+            <div class="container">
+                <!-- FILTER SIDEBAR -->
+                <aside class="filter-sidebar" aria-label="Project filters">
+                    <h2 class="filter-heading">Filter projects</h2>
+
+                    <nav aria-label="Project categories">
+                        <ul class="filter-list">
+                            <li>
+                                <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">
+                                    All
+                                </button>
+                            </li>
+
+                            <li>
+                                <button class="filter-btn" type="button" data-filter="branding" aria-pressed="false">
+                                    Branding
+                                </button>
+                            </li>
+
+                            <li>
+                                <button class="filter-btn" type="button" data-filter="web-design" aria-pressed="false">
+                                    Web Design
+                                </button>
+                            </li>
+
+                            <li>
+                                <button class="filter-btn" type="button" data-filter="development" aria-pressed="false">
+                                    Development
+                                </button>
+                            </li>
+
+                            <li>
+                                <button class="filter-btn" type="button" data-filter="uiux" aria-pressed="false">
+                                    UI / UX
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+
+
+                <!-- PROJECT GRID -->
+                <section class="work-grid" aria-label="Project list">
+
+                    <!-- PROJECT CARD -->
+                    <article class="project-card" data-category="branding web-design development">
+                        <a href="/work/one-man-kitchen-ordering-system/" class="project-link" aria-label="View one man kitchen restaurant ordering system project">
+                            <figure class="project-media">
+                                <img src="/assets/img/one-man-kitchen-01.png" alt="One man kitchen restaurant ordering system preview" loading="lazy">
+                            </figure>
+
+                            <div class="project-info">
+                                <p class="project-tag">Branding • Web Design • Development</p>
+
+                                <h3 class="project-title">
+                                    One Man Kitchen
+                                </h3>
+
+                                <p class="project-excerpt">
+                                    A modern ordering website serving bold, spicy Sri Lankan cuisine and Asian fusion from Kurunegala.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- PROJECT CARD -->
+                    <article class="project-card" data-category="web-design development">
+                        <a href="/work/divine-dreams-events-landing-page/" class="project-link" aria-label="Divine dreams events project">
+                            <figure class="project-media">
+                                <img src="/assets/img/divine-dreams-events-01.png" alt="Divine dreams events landing page preview" loading="lazy">
+                            </figure>
+
+                            <div class="project-info">
+                                <p class="project-tag">Web Design • Development</p>
+
+                                <h3 class="project-title">
+                                    Divine Dreams Events
+                                </h3>
+
+                                <p class="project-excerpt">
+                                    A premium event planning brand landing page specializing in weddings,
+                                    corporate functions, and private celebrations.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- PROJECT CARD -->
+                    <article class="project-card" data-category="branding web-design development">
+                        <a href="/work/globetrek-travel-booking-platform/" class="project-link" aria-label="View globetrek travel booking platform project">
+                            <figure class="project-media">
+                                <img src="/assets/img/globetrek-01.png" alt="Globetrek travel booking platform preview" loading="lazy">
+                            </figure>
+
+                            <div class="project-info">
+                                <p class="project-tag">Branding • Web Design • Development</p>
+
+                                <h3 class="project-title">
+                                    Globetrek Adventures
+                                </h3>
+
+                                <p class="project-excerpt">
+                                    A modern travel booking platform that helps travelers discover destinations, browse curated
+                                    tour packages, and book unforgettable adventures through a fast, responsive, and user-friendly experience.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- PROJECT CARD -->
+                    <article class="project-card" data-category="uiux">
+                        <a href="./restaurant-platform/" class="project-link" aria-label="View Restaurant Platform project">
+                            <figure class="project-media">
+                                <img src="../assets/img/project2.jpg" alt="Restaurant platform UI design preview" loading="lazy">
+                            </figure>
+
+                            <div class="project-info">
+                                <p class="project-tag">UI / UX</p>
+
+                                <h3 class="project-title">
+                                    Restaurant Platform
+                                </h3>
+
+                                <p class="project-excerpt">
+                                    Seamless ordering and customer experience for a modern restaurant.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+
+        <section class="clients">
+            <div class="container">
+                <span class="section-tag">TRUSTED BY</span>
+                <h2 class="heading">Clients Who Appreciate Us</h2>
+                <div class="clients-row">
+                    <span>Brand 1</span>
+                    <span>Brand 2</span>
+                    <span>Brand 3</span>
+                    <span>Brand 4</span>
+                    <span>Brand 5</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="section-tag">Start a Project</div>
+                <h2 class="heading">Let's Build Something Amazing.</h2>
+                <p class="description">Ready to create a digital experience that stands out?</p>
+                <a href="/contact/" class="cta cta--primary">Start a Project</a>
+            </div>
+        </section>
+
+
+
+        <button class="back-to-top" id="backToTop">↑</button>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-watermark" aria-hidden="true">
+                Zoura Labs
+            </div>
+
+            <div class="footer-top">
+                <!-- Brand / Intro -->
+                <section class="footer-brand" aria-labelledby="footer-connect-title">
+                    <h2 id="footer-connect-title" class="section-tag">
+                        Let's Connect
+                    </h2>
+
+                    <p class="footer-lead">
+                        Have a project in mind? We'd love to hear about it.
+                    </p>
+
+                    <address>
+                        <a class="footer-email" href="mailto:hello@zouralabs.com?subject=Project%20Inquiry%20-%20Zoura%20Labs&amp;body=Hello%20Zoura%20Labs,%0D%0A%0D%0AI%20would%20like%20to%20inquire%20about%20your%20services%20and%20discuss%20a%20potential%20project.%0D%0A%0D%0AProject%20details:%0D%0A-%20Type%20of%20project:%0D%0A-%20Requirements:%0D%0A-%20Timeline:%0D%0A-%20Budget:%0D%0A-%20Phone%20number%20(optional):%0D%0A%0D%0APlease%20let%20me%20know%20your%20availability.%0D%0A%0D%0ARegards,%0D%0A%5BYour%20Name%5D">
+                            hello@zouralabs.com
+                        </a>
+                    </address>
+
+                    <p>
+                        Building premium websites, brands and digital experiences for ambitious businesses.
+                    </p>
+                </section>
+
+                <!-- Footer Links -->
+                <!-- <nav class="footer-links" aria-label="Footer navigation"> -->
+                <section class="footer-column" aria-labelledby="nav-title">
+                    <h3 id="nav-title">Navigation</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/work/">Work</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="services-title">
+                    <h3 id="services-title">Services</h3>
+                    <ul>
+                        <li><a href="/services/web-mobile/">Web & Apps</a></li>
+                        <li><a href="/services/business-systems/">Systems</a></li>
+                        <li><a href="/services/ai-automation/">AI</a></li>
+                        <li><a href="/services/digital-marketing/">Marketing</a></li>
+                        <li><a href="/services/branding-design/">Branding & Design</a></li>
+                        <li><a href="/services/ecommerce/">Commerce</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column socials" aria-labelledby="social-title">
+                    <h3 id="social-title">Social</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Behance</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="location-title">
+                    <h3 id="location-title">Location</h3>
+                    <ul>
+                        <li>Colombo, Sri Lanka</li>
+                        <li>Working Worldwide</li>
+                        <li>GMT +5:30</li>
+                    </ul>
+
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>7:00 AM – 10:00 PM</li>
+                        <li>Daily (GMT +5:30)</li>
+                    </ul>
+                </section>
+                <!-- </nav> -->
+            </div>
+
+            <!-- Bottom legal area -->
+            <div class="footer-bottom">
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script> Zoura Labs. All Rights Reserved.
+                </p>
+
+                <nav aria-label="Legal links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="/terms/">Terms of Service</a>
+                </nav>
+
+                <p>Built by Zoura Labs · Sri Lanka</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="/assets/js/global.js"></script>
+
+
+    <script>
+
+        // ====================================
+        // MAGNETIC BUTTON
+        // ====================================
+
+        // const buttons = document.querySelectorAll(".cta");
+
+        // buttons.forEach((button) => {
+        //     button.addEventListener("mousemove", (e) => {
+        //         const rect = button.getBoundingClientRect();
+        //         const x = e.clientX - rect.left - rect.width / 2;
+        //         const y = e.clientY - rect.top - rect.height / 2;
+
+        //         gsap.to(button, {
+        //             x: x * 0.25,
+        //             y: y * 0.25,
+        //             duration: .4,
+        //             ease: "power3.out"
+        //         });
+        //     });
+
+        //     button.addEventListener("mouseleave", () => {
+        //         gsap.to(button, {
+        //             x: 0,
+        //             y: 0,
+        //             duration: .6,
+        //             ease: "elastic.out(1, 0.4)"
+        //         });
+        //     });
+        // });
+
+
+
+        // ====================================
+        // ORB FOLLOW
+        // ====================================
+
+        // const orb = document.querySelector(".orb-1");
+
+        // window.addEventListener("mousemove", (e) => {
+
+        //     gsap.to(orb, {
+        //         x: e.clientX * 0.15,
+        //         y: e.clientY * 0.15,
+        //         duration: 2,
+        //         ease: "power4.out"
+        //     });
+
+        // });
+
+
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(".project-card");
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+
+                // active state
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const filter = btn.dataset.filter;
+
+                cards.forEach(card => {
+
+                    const categories = card.dataset.category.split(" ");
+
+                    if (filter === "all" || categories.includes(filter)) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+
+                });
+
+            });
+        });
+    </script>
+</body>
+
+</html>

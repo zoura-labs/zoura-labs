@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service - Zoura Labs</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            background: #050505;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+        }
+
+        .orb1 {
+            width: 520px;
+            height: 520px;
+            background: #7c3aed;
+            top: -140px;
+            right: -120px;
+            opacity: .28;
+        }
+
+        .orb2 {
+            width: 420px;
+            height: 420px;
+            background: #2563eb;
+            bottom: -140px;
+            left: -120px;
+            opacity: .18;
+        }
+
+        .grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
+        }
+
+        .back {
+            position: fixed;
+            top: 25px;
+            left: 25px;
+            z-index: 10;
+            padding: 12px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            backdrop-filter: blur(20px);
+            color: rgba(255, 255, 255, .7);
+            text-decoration: none;
+            transition: .4s;
+            font-size: .9rem;
+        }
+
+        .back:hover {
+            transform: translateX(-5px);
+            color: var(--primary);
+            border-color: rgba(157, 124, 255, .4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 160px 8vw;
+        }
+
+        .tag {
+            color: var(--primary);
+            letter-spacing: 3px;
+            font-size: .85rem;
+        }
+
+        h1 {
+            font-size: clamp(70px, 8vw, 130px);
+            margin: 20px 0 10px;
+            line-height: .95;
+            font-weight: 700;
+            letter-spacing: -2%;
+        }
+
+        .date {
+            opacity: .6;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+            padding: 38px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(255, 255, 255, .08);
+            backdrop-filter: blur(20px);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 14px;
+            font-size: 1.4rem;
+        }
+
+        p,
+        ul {
+            color: rgba(255, 255, 255, .65);
+            line-height: 1.9;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+
+        .site-footer {
+            text-align: center;
+            padding: 40px 0 60px;
+            opacity: 0.75;
+            font-size: 0.95rem;
+        }
+
+        /* NAV */
+        .footer-nav {
+            margin-bottom: 10px;
+        }
+
+        /* LINKS */
+        .footer-link {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(157, 124, 255, .4);
+            margin: 0 8px;
+            transition: 0.3s ease;
+            opacity: 0.75;
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+        }
+
+        /* SEPARATOR */
+        .footer-separator {
+            margin: 0 6px;
+            opacity: 0.4;
+        }
+
+        /* COPYRIGHT TEXT */
+        .footer-copy {
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    
+    <div class="preloader">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="ring"></div>
+        <div class="center">
+            <div class="logo">Zoura Labs</div>
+            <div class="percent"><span id="percent">0</span>%</div>
+        </div>
+    </div>
+
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="grid"></div>
+
+    <a href="/" class="back">← Home</a>
+
+    <div class="container">
+        <div class="tag">LEGAL • ZOURA LABS</div>
+        <h1>Terms of Service</h1>
+        <div class="date">Last Updated: 19 June 2026</div>
+
+        <div class="card">
+            <h2>1. Agreement</h2>
+            <p>By using Zoura Labs services, you agree to these Terms. These apply to all clients, projects, and communications.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Official Communication Policy</h2>
+            <ul>
+                <li>Only authorized representatives of Zoura Labs may communicate with clients.</li>
+                <li>No freelancer or external party may negotiate pricing or project scope.</li>
+                <li>Only official email, WhatsApp, or phone numbers are valid.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Project Structure</h2>
+            <p>Project planning, approvals, and client communication are handled by authorized representatives. Execution is done by internal or contracted team members.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Scope Control</h2>
+            <p>All work is strictly limited to the agreed scope. Additional features or changes will be treated as new work and billed separately.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Payments</h2>
+            <ul>
+                <li>Payments must be made only to official company accounts.</li>
+                <li>We are not responsible for payments made to unauthorized persons.</li>
+                <li>Projects may be paused in case of delayed payments.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. Revisions</h2>
+            <p>Each project includes a limited number of revisions. Additional revisions will incur extra charges.</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Delivery & Timelines</h2>
+            <p>Delivery timelines are estimates. Delays caused by client feedback, missing materials, or external factors are not the responsibility of Zoura Labs.</p>
+        </div>
+
+        <div class="card">
+            <h2>8. Intellectual Property</h2>
+            <p>All work remains property of Zoura Labs until full payment is received. After full payment, ownership of final deliverables transfers to the client unless otherwise agreed.</p>
+        </div>
+
+        <div class="card">
+            <h2>9. Confidentiality</h2>
+            <p>Both parties agree not to disclose confidential business, technical, or financial information shared during the project.</p>
+        </div>
+
+        <div class="card">
+            <h2>10. Client Responsibilities</h2>
+            <ul>
+                <li>Provide required content on time</li>
+                <li>Give timely feedback and approvals</li>
+                <li>Ensure accuracy of provided information</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>11. Refund Policy</h2>
+            <p>Payments are non-refundable once work has started. Refunds are only issued in special cases at the discretion of Zoura Labs.</p>
+        </div>
+
+        <div class="card">
+            <h2>12. Termination</h2>
+            <p>Either party may terminate a project with written notice. Completed or ongoing work must be paid for in full.</p>
+        </div>
+
+        <div class="card">
+            <h2>13. Liability</h2>
+            <p>Zoura Labs is not responsible for indirect losses, business interruptions, or third-party service failures.</p>
+        </div>
+
+        <div class="card">
+            <h2>14. Misrepresentation</h2>
+            <p>No individual is authorized to represent Zoura Labs without approval. Any false representation may result in legal action.</p>
+        </div>
+
+        <div class="card">
+            <h2>15. Intellectual Property Protection</h2>
+            <p>All branding, website design, code, and content created by Zoura Labs are protected. Copying, reproduction, or reuse without permission is strictly prohibited.</p>
+        </div>
+
+        <div class="card">
+            <h2>16. Copyright Notice</h2>
+            <p>
+                © <script>document.write(new Date().getFullYear())</script> Zoura Labs. All Rights Reserved.
+                All content, designs, code, branding, and materials displayed on this website
+                and produced by Zoura Labs are protected by copyright laws.
+                Unauthorized copying, reproduction, or distribution of any materials without
+                prior written permission is strictly prohibited.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>17. Governing Law</h2>
+            <p>These Terms are governed by the laws of Sri Lanka. Any disputes will be handled under Sri Lankan jurisdiction.</p>
+        </div>
+    </div>
+
+
+
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+
+    <footer class="site-footer">
+        <nav class="footer-nav" aria-label="Legal links">
+            <a href="/privacy/" class="footer-link">Privacy Policy</a>
+            <span class="footer-separator">•</span>
+            <a href="/contact/" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-copy">
+            © <script>document.write(new Date().getFullYear())</script> Zoura Labs. All Rights Reserved.
+        </div>
+    </footer>
+
+
+
+    <script src="/assets/js/global.js"></script>
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate hero section
+        gsap.from(".tag", {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power3.out"
+        });
+
+        gsap.from("h1", {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            delay: 0.1,
+            ease: "power3.out"
+        });
+
+        gsap.from(".date", {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out"
+        });
+
+
+        // 🔥 Scroll Reveal for cards (main effect)
+        gsap.utils.toArray(".card").forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                y: 60,
+                scale: 0.98,
+                duration: 0.9,
+                ease: "power3.out",
+                delay: i * 0.03
+            });
+        });
+
+
+
+        gsap.from(".site-footer", {
+            scrollTrigger: {
+                trigger: ".site-footer",
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            },
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            ease: "power3.out"
+        });
+    </script>
+
+</body>
+
+</html>

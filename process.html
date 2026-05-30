@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Process Section</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #05060a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* SECTION */
+        .process-section {
+            width: 100%;
+            padding: 0 8vw;
+            position: relative;
+            background:
+                radial-gradient(1000px 600px at 20% 10%, rgba(139, 92, 246, .08), transparent 60%),
+                radial-gradient(800px 500px at 80% 70%, rgba(59, 130, 246, .06), transparent 60%),
+                #05060a;
+        }
+
+        /* HEADER (STICKY) */
+        .process-header {
+            position: sticky;
+            top: 15%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            z-index: 5;
+        }
+
+        .process-header span {
+            color: #8b5cf6;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+        }
+
+        .process-header h2 {
+            font-size: clamp(50px, 7vw, 110px);
+            font-weight: 600;
+            margin: 25px 0;
+        }
+
+        .process-header p {
+            max-width: 650px;
+            color: #8b92a7;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        /* SCROLL AREA */
+        .sticky-wrap {
+            height: 450vh;
+            /* controls total scroll length */
+            position: relative;
+        }
+
+        /* STICKY CENTER STAGE */
+        .sticky-stage {
+            position: sticky;
+            top: 65%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+        }
+
+        /* STEP */
+        .step {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-140px, -50%);
+            opacity: 0;
+
+            display: flex;
+            gap: 60px;
+            max-width: 900px;
+
+            transition: 0.7s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        /* ACTIVE STEP */
+        .step.active {
+            opacity: 1;
+            transform: translate(0, -50%);
+        }
+
+        /* NUMBER */
+        .num {
+            font-size: 140px;
+            font-weight: 700;
+            color: rgba(139, 92, 246, .08);
+            line-height: 1;
+        }
+
+        /* TEXT */
+        .step h3 {
+            font-size: 56px;
+            margin-bottom: 14px;
+            letter-spacing: -1px;
+        }
+
+        .step p {
+            color: #9aa3b2;
+            line-height: 1.9;
+            font-size: 18px;
+            max-width: 520px;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+
+            .process-section {
+                padding: 0 6vw;
+            }
+
+            .step {
+                gap: 30px;
+            }
+
+            .num {
+                font-size: 90px;
+            }
+
+            .step h3 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="process-section">
+
+        <!-- 🔥 Sticky Header -->
+        <div class="process-header">
+            <span>How We Work</span>
+            <h2>From Idea to Launch</h2>
+            <p>
+                A structured but flexible workflow designed to move from concept to scalable digital products.
+            </p>
+        </div>
+
+        <!-- Scroll system -->
+        <div class="sticky-wrap">
+
+            <div class="sticky-stage">
+
+                <div class="step active">
+                    <span class="num">01</span>
+                    <div>
+                        <h3>Discover</h3>
+                        <p>We analyze your business model, audience, and goals to uncover opportunities and direction.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="num">02</span>
+                    <div>
+                        <h3>Plan</h3>
+                        <p>We define structure, architecture, user journey, and strategy before any development begins.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="num">03</span>
+                    <div>
+                        <h3>Create</h3>
+                        <p>We design and build scalable digital solutions tailored to your business needs.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="num">04</span>
+                    <div>
+                        <h3>Launch</h3>
+                        <p>We test, optimize, and deploy your product with performance and stability in focus.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="num">05</span>
+                    <div>
+                        <h3>Grow</h3>
+                        <p>We continuously improve and support your product for long-term success.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const steps = document.querySelectorAll(".step");
+
+        window.addEventListener("scroll", () => {
+
+            const section = document.querySelector(".sticky-wrap");
+            const start = section.offsetTop;
+            const end = section.offsetTop + section.offsetHeight - window.innerHeight;
+
+            let progress = (window.scrollY - start) / (end - start);
+
+            progress = Math.max(0, Math.min(1, progress));
+
+            let index = Math.floor(progress * steps.length);
+
+            steps.forEach((step, i) => {
+                step.classList.toggle("active", i === index);
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

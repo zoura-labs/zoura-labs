@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://zoura-labs.vercel.app/</loc>
+  <lastmod>2026-07-01T16:42:49+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/</loc>
+  <lastmod>2026-07-01T16:42:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/</loc>
+  <lastmod>2026-07-01T16:42:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/about/</loc>
+  <lastmod>2026-07-01T16:42:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/</loc>
+  <lastmod>2026-07-01T16:42:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/contact/</loc>
+  <lastmod>2026-07-01T16:42:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/web-mobile/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/branding-design/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/ecommerce/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/ai-automation/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/business-systems/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/digital-marketing/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/one-man-kitchen-ordering-system</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/divine-dreams-events-landing-page/</loc>
+  <lastmod>2026-07-01T16:42:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/globetrek-travel-booking-platform/</loc>
+  <lastmod>2026-07-01T16:42:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/privacy/</loc>
+  <lastmod>2026-07-01T16:42:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/terms/</loc>
+  <lastmod>2026-07-01T16:42:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/one-man-kitchen-ordering-system/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/restaurant-platform/</loc>
+  <lastmod>2026-07-01T16:42:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/restaurant-booking-platform/</loc>
+  <lastmod>2026-07-01T16:42:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/food-delivery-platform/</loc>
+  <lastmod>2026-07-01T16:42:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/maintenance-support/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/strategy-consulting/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/integrations-automation/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/cloud-deployment/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/analytics-optimization/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/services/audit-fixes/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/ux/why-websites-fail-to-convert</loc>
+  <lastmod>2026-07-01T16:42:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/development/scalable-frontend-systems</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/branding/brand-identity-system</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/design/ui-design-systems-scale</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/seo/seo-in-2026-what-works</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/ux/psychology-high-converting-websites</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/growth/traffic-without-leads</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/business/website-lead-generation-guide</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/blog/case-study/increased-conversions-240</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work</loc>
+  <lastmod>2026-07-01T16:42:49+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/restaurant-booking-platform</loc>
+  <lastmod>2026-07-01T16:42:52+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/work/food-delivery-platform</loc>
+  <lastmod>2026-07-01T16:42:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/restaurant-platform/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/restaurant-booking-platform/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://zoura-labs.vercel.app/food-delivery-platform/</loc>
+  <lastmod>2026-07-01T16:42:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+</urlset>

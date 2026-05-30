@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Zoura Labs | Web, App & Software Development Agency in Sri Lanka</title>
+    <meta name="description" content="Get in touch with Zoura Labs for web development, mobile app development, software solutions, AI automation, SEO, and digital marketing services. Let’s discuss your project and build something powerful together.">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+
+
+    <script type="application/ld+json">
+        {
+         "@context":"https://schema.org",
+         "@type":"LocalBusiness",
+         "name":"Zoura Labs",
+         "telephone":"+94767855906",
+         "address":{
+         "@type":"PostalAddress",
+         "addressLocality":"Colombo",
+         "addressCountry":"LK"
+         },
+         "url":"https://zouralabs.com"
+        }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How quickly do you respond to inquiries?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We typically respond within one business day. For urgent inquiries, you can also contact us by phone or WhatsApp."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What information should I include in my inquiry?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Please include your project goals, required features, preferred timeline, and estimated budget if available. The more details you provide, the better we can assist you."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I schedule a consultation?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We offer free initial consultations to discuss your project, answer questions, and recommend the best solution for your business."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What happens after I submit the contact form?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We'll review your inquiry, contact you if additional information is needed, and prepare a proposal outlining the scope, timeline, and estimated cost."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you provide project quotations?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Every quotation is customized based on your project requirements, ensuring transparent pricing with no hidden fees."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What payment methods do you accept?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We accept bank transfers and other mutually agreed payment methods. Payment schedules are discussed before the project begins."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Where is Zoura Labs located?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We're based in Colombo, Sri Lanka, and work with clients locally and internationally through remote collaboration."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "I'm not sure what solution I need. Can you help?",
+                    "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. We'll discuss your goals, understand your challenges, and recommend the most suitable solution for your business and budget."
+                    }
+                }
+            ]
+        }
+    </script>
+    <style>
+        /* =========================
+        HERO
+        ========================= */
+
+        .contact-hero {
+            position: relative;
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-block: 170px 100px;
+                margin-inline: auto;
+            }
+
+            .section-tag {
+                color: var(--primary);
+                letter-spacing: 3px;
+                font-size: .9rem;
+                text-transform: uppercase;
+                display: none;
+            }
+
+            .heading {
+                font-size: clamp(70px, 8vw, 160px);
+                line-height: .95;
+                margin-top: 30px;
+                font-weight: 700;
+                letter-spacing: -3px;
+            }
+
+            .subtitle {
+                margin-top: 40px;
+                max-width: 550px;
+                color: rgba(255, 255, 255, .55);
+                line-height: 1.9;
+                font-size: 1.1rem;
+            }
+
+
+
+            .scroll-cue {
+                position: absolute;
+                left: 8vw;
+                bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                display: none;
+
+                span {
+                    font-size: .75rem;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, .4);
+                }
+
+                .line {
+                    width: 1px;
+                    height: 80px;
+                    background: rgba(255, 255, 255, .1);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: var(--primary);
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    box-shadow:
+                        0 0 10px var(--primary),
+                        0 0 30px var(--primary);
+                    animation: scrollDot 2s infinite ease;
+                }
+            }
+        }
+
+        @keyframes scrollDot {
+            0% {
+                top: -10px;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+
+
+
+
+
+
+        .trust-section {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-inline: auto;
+                padding-block: 20px 50px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 18px;
+                gap: 25px;
+            }
+
+            .trust-item {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                padding: 16px 18px;
+                border: 1px solid rgba(255, 255, 255, .08);
+                background: rgba(255, 255, 255, .02);
+                backdrop-filter: blur(10px);
+                border-radius: var(--radius-md);
+                transition: .3s ease;
+                flex: 1;
+                min-width: 180px;
+            }
+
+            .trust-item:hover {
+                border-color: var(--primary);
+                transform: translateY(-3px);
+                background: rgba(124, 77, 255, .08);
+            }
+
+            .icon {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(124, 77, 255, .15);
+                color: var(--primary);
+                font-size: 18px;
+                flex-shrink: 0;
+            }
+
+            .trust-item h4 {
+                color: #fff;
+                font-size: 15px;
+                margin: 0 0 4px;
+                font-weight: 600;
+            }
+
+            .trust-item p {
+                color: #9a9a9a;
+                font-size: 13px;
+                line-height: 1.5;
+                margin: 0;
+            }
+        }
+
+
+
+
+
+
+
+        /* =========================
+BASE SYSTEM
+========================= */
+
+        .contact-section {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+                padding: 100px 0 50px;
+            }
+
+            .contact-container {
+                display: flex;
+                flex-direction: column;
+                gap: 120px;
+            }
+        }
+
+
+        /* =========================
+GRID
+========================= */
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 100px;
+        }
+
+        #form {
+            scroll-margin-top: 150px;
+        }
+
+        /* =========================
+FORM
+========================= */
+
+        .contact-form-area .heading {
+            font-size: var(--h1-size);
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-form label {
+            font-size: .75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .75);
+            margin-top: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 18px 22px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(255, 255, 255, .08);
+            color: white;
+            font-family: inherit;
+            outline: none;
+            transition: .25s;
+        }
+
+        .contact-form textarea {
+            min-height: 170px;
+            resize: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .contact-form .cta {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 50%;
+        }
+
+        /* =========================
+           CONTACT INFO
+        ========================= */
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            padding-top: 205px;
+        }
+
+        .contact-block {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+            .phone-btn {
+                border: none;
+                background: none;
+                cursor: pointer;
+                color: var(--text);
+                font-size: var(--h6-size);
+                transition: .5s ease;
+            }
+
+            .phone-btn:hover {
+                color: var(--primary);
+            }
+
+            .overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, .45);
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                opacity: 0;
+                visibility: hidden;
+                transition: .25s;
+            }
+
+            .overlay.show {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .action-sheet {
+                width: 100%;
+                max-width: 420px;
+                background: var(--bg);
+                border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+                border: 1px solid rgba(255, 255, 255, .08);
+                padding: 24px;
+                animation: slideUp .25s ease;
+            }
+
+            .action-sheet h3 {
+                font-size: var(--h5-size);
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .action {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                padding: 15px 30px;
+                border-radius: var(--radius-full);
+                margin: 12px 0;
+                font-weight: 600;
+            }
+
+            .call {
+                background: var(--primary);
+                color: var(--text);
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            .whatsapp {
+                background: #25D366;
+                color: var(--text);
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            .cancel {
+                width: 100%;
+                margin-top: 10px;
+                padding: 15px;
+                border: none;
+                border-radius: var(--radius-full);
+                background: #f3f4f6;
+                cursor: pointer;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(80px);
+                }
+
+                to {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .contact-block span {
+            display: block;
+            font-size: .7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .4);
+            margin-bottom: 10px;
+        }
+
+        .contact-block a {
+            color: white;
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        .contact-block a:hover {
+            color: var(--primary);
+        }
+
+        .contact-block a,
+        .contact-block p {
+            font-size: 1.3rem;
+        }
+
+
+
+
+        /* =========================
+NEXT STEPS
+========================= */
+
+        .next-steps h2 {
+            font-size: var(--h1-size);
+            margin-bottom: 50px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .steps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .steps li {
+            padding: 45px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .02);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-md);
+            transition: .3s ease;
+        }
+
+        .steps li:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            background: rgba(124, 77, 255, .08);
+        }
+
+        .step-number {
+            display: block;
+            font-size: .8rem;
+            color: var(--primary);
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .steps h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .steps p {
+            color: rgba(255, 255, 255, .6);
+            max-width: 650px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+RESPONSIVE
+========================= */
+
+        @media(max-width:900px) {
+
+            .container {
+                padding: 80px 0;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 80px;
+            }
+
+            .contact-container {
+                gap: 90px;
+            }
+
+            .contact-hero h1 {
+                letter-spacing: -3px;
+            }
+        }
+
+
+
+
+
+
+
+
+        .faq-section {
+            position: relative;
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-inline: auto;
+                padding: 100px 0;
+
+                .section-tag {
+                    color: var(--primary);
+                    letter-spacing: 4px;
+                    font-size: var(--p-size);
+                    display: inline-block;
+                    margin-bottom: 30px;
+                }
+
+                .heading {
+                    font-size: clamp(70px, 8vw, 130px);
+                    line-height: .95;
+                    letter-spacing: -3px;
+                    font-weight: 700;
+                }
+
+                .description {
+                    max-width: 550px;
+                    margin-top: 30px;
+                    color: var(--text-dim);
+                    line-height: 1.9;
+                }
+
+                .faq-list {
+                    margin-top: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px;
+                }
+
+                .faq-item {
+                    border-bottom: 1px solid rgba(255, 255, 255, .08);
+                    transition: .5s ease;
+                    overflow: hidden;
+                }
+
+                .faq-item:hover {
+                    border-color: rgba(157, 124, 255, .3);
+                }
+
+                .faq-question {
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    color: var(--text);
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 28px 0;
+                    font-size: var(--h6-size);
+                    text-align: left;
+                }
+
+                .faq-question span {
+                    color: var(--primary);
+                    font-size: var(--h5-size);
+                    cursor: pointer;
+                }
+
+                .faq-answer {
+                    max-width: 1000px;
+                    max-height: 0;
+                    overflow: hidden;
+                    color: var(--text-dim);
+                    line-height: 1.9;
+                    transition: .5s ease;
+                }
+
+                .faq-answer a {
+                    color: var(--text);
+                    transition: .5s ease;
+                }
+
+                .faq-answer a:hover {
+                    color: var(--primary);
+                }
+
+                .faq-item.active .faq-answer {
+                    max-height: 200px;
+                    padding: 0 0 30px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <div class="light" id="light"></div>
+
+    <div class="preloader">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="ring"></div>
+        <div class="center">
+            <div class="logo">Zoura Labs</div>
+            <div class="percent"><span id="percent">0</span>%</div>
+        </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+    <div class="glow-line"></div>
+
+
+    <div class="social-rail">
+        <a href="#" aria-label="X (Twitter)">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a href="#" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+        </a>
+    </div>
+
+
+    <header class="navbar">
+        <nav class="container">
+            <!-- LEFT -->
+            <a href="/" class="logo" aria-label="Zoura Labs homepage">
+                <!-- Zoura Labs -->
+                <img src="/assets/icons/logo.png" alt="Company Logo">
+            </a>
+
+            <!-- CENTER LINKS -->
+            <div class="nav-links">
+                <a href="/" class="nav-link" aria-label="Zoura Labs Homepage">
+                    Home
+                    <span class="tooltip">Homepage</span>
+                </a>
+
+                <a href="/work/" class="nav-link" aria-label="View Zoura Labs portfolio work">
+                    Work
+                    <span class="tooltip">Selected projects & case studies</span>
+                </a>
+
+                <a href="/services/" class="nav-link" aria-label="Explore Zoura Labs services">
+                    Services
+                    <span class="tooltip">Full range of digital services</span>
+                </a>
+
+                <a href="/about/" class="nav-link" aria-label="Learn about Zoura Labs">
+                    About
+                    <span class="tooltip">Who we are & how we work</span>
+                </a>
+
+                <a href="/blog/" class="nav-link" aria-label="Read Zoura Labs blog articles">
+                    Blog
+                    <span class="tooltip">Insights, updates & thinking</span>
+                </a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="nav-right">
+                <a href="tel:+94767855906" class="nav-phone" aria-label="Call Zoura Labs at +94 76 785 5906">
+
+                    <span class="dot"></span>
+                    +94 76 785 5906
+                    <span class="tooltip">Speak directly with our team</span>
+
+                </a>
+
+                <a href="/contact/" class="nav-btn" aria-label="Start a project with Zoura Labs">
+                    Let's Talk
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <main>
+        <!-- HERO -->
+        <header class="contact-hero">
+            <div class="container">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+
+                <p class="section-tag">CONTACT</p>
+                <h1 class="heading" id="contact-title">Let’s Build Something Great</h1>
+                <p class="subtitle">
+                    Share your vision with us. Every project is personally overseen by the founder and core team,
+                    ensuring direct communication, strategic guidance, and hands-on execution throughout the project.
+                </p>
+
+                <div class="scroll-cue">
+                    <span>Scroll</span>
+                    <div class="line">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <div class="trust-section">
+            <div class="container">
+                <div class="trust-item">
+                    <div class="icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+                    <div>
+                        <h4>Founder-Led</h4>
+                        <p>Your project is handled directly by the founder.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="icon">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+                    <div>
+                        <h4>Worldwide</h4>
+                        <p>Working remotely with clients around the world.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="icon">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+                    <div>
+                        <h4>Quick Response</h4>
+                        <p>We usually reply within 24 hours.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <section class="contact-section" aria-labelledby="contact-title">
+            <div class="container contact-container">
+                <!-- GRID -->
+                <div id="form" class="contact-content">
+                    <!-- FORM -->
+                    <section class="contact-form-area" aria-label="Contact Form">
+                        <form class="contact-form" method="post">
+                            <h2 class="heading">Tell Us About Your Project</h2>
+
+                            <label for="name">Name <span>*</span></label>
+                            <input id="name" type="text" name="name" placeholder="e.g. John Doe" required>
+
+                            <label for="email">Email <span>*</span></label>
+                            <input id="email" type="email" name="email" placeholder="e.g. john@company.com" required>
+
+                            <label for="company">Company</label>
+                            <input id="company" type="text" name="company" placeholder="e.g. Acme Ltd.">
+
+                            <label for="type">Project Type</label>
+                            <input id="type" type="text" name="inquiry" placeholder="e.g. Website, App, Branding">
+
+                            <label for="message">Message <span>*</span></label>
+                            <textarea id="message" name="message" placeholder="Describe your project, goals, budget, and timeline." required></textarea>
+
+                            <button type="submit" class="cta cta--primary">Send Inquiry</button>
+                        </form>
+                    </section>
+
+                    <!-- INFO -->
+                    <aside class="contact-info">
+
+                        <div class="contact-block">
+                            <span><i class="bi bi-phone"></i> Founder (Call/WhatsApp)</span>
+
+                            <button id="phoneBtn" class="phone-btn">
+                                +94 76 785 5906
+                            </button>
+
+                            <div class="overlay" id="overlay">
+                                <div class="action-sheet">
+                                    <h3>Choose an action</h3>
+
+                                    <a href="tel:+94767855906" class="action call">
+                                        <i class="bi bi-telephone"></i> Call
+                                    </a>
+
+                                    <a href="https://wa.me/94767855906" class="action whatsapp">
+                                        <i class="bi bi-whatsapp"></i> WhatsApp
+                                    </a>
+
+                                    <button id="closeBtn" class="cancel">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-block">
+                            <span><i class="bi bi-whatsapp"></i> Client Success Team (WhatsApp)</span>
+                            <a href="https://wa.me/94XXXXXXXXX">+94XXXXXXXXX</a>
+                        </div>
+
+                        <div class="contact-block">
+                            <span><i class="bi bi-envelope"></i> Email</span>
+                            <a href="mailto:hello@zouralabs.com">hello@zouralabs.com</a>
+                        </div>
+
+                        <div class="contact-block">
+                            <span><i class="bi bi-map"></i> Studio Location</span>
+                            <p>Colombo, Sri Lanka · Working remotely worldwide</p>
+                        </div>
+
+                        <div class="contact-block">
+                            <span><i class="bi bi-clock"></i> Availability</span>
+                            <p>Every day · 7:00 AM – 10:00 PM (GMT+5:30)</p>
+                        </div>
+
+                    </aside>
+                </div>
+
+                <!-- STEPS -->
+                <section class="next-steps">
+                    <h2>Our Process</h2>
+
+                    <ol class="steps">
+
+                        <li>
+                            <span class="step-number">01</span>
+                            <h3>Share Your Vision</h3>
+                            <p>Tell us about your business, goals, and project requirements.</p>
+                        </li>
+
+                        <li>
+                            <span class="step-number">02</span>
+                            <h3>Project Evaluation</h3>
+                            <p>We carefully review your requirements and define the best approach.</p>
+                        </li>
+
+                        <li>
+                            <span class="step-number">03</span>
+                            <h3>Discovery Session</h3>
+                            <p>We'll discuss objectives, timelines, and project scope to ensure alignment.</p>
+                        </li>
+
+                        <li>
+                            <span class="step-number">04</span>
+                            <h3>Proposal & Launch</h3>
+                            <p>You'll receive a detailed roadmap and we'll begin bringing your vision to life.</p>
+                        </li>
+
+                    </ol>
+                </section>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="faq-section">
+            <div class="container">
+                <span class="section-tag">CONTACT FAQs</span>
+                <h2 class="heading">Before You Contact Us</h2>
+                <p class="description">
+                    Everything you need to know before reaching out to our team.
+                </p>
+
+                <div class="faq-list">
+
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            How quickly do you respond to inquiries?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            We typically respond within one business day. For urgent inquiries, you can also contact us by phone or WhatsApp.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What information should I include in my inquiry?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Please include your project goals, required features, preferred timeline, and estimated budget if available. The more details you provide, the better we can assist you.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I schedule a consultation?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Yes. We offer free initial consultations to discuss your project, answer questions, and recommend the best solution for your business.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What happens after I submit the contact form?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            We'll review your inquiry, contact you if additional information is needed, and prepare a proposal outlining the scope, timeline, and estimated cost.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you provide project quotations?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Yes. Every quotation is customized based on your project requirements, ensuring transparent pricing with no hidden fees.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What payment methods do you accept?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            We accept bank transfers and other mutually agreed payment methods. Payment schedules are discussed before the project begins.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Where is Zoura Labs located?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            We're based in Colombo, Sri Lanka, and work with clients locally and internationally through remote collaboration.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            I'm not sure what solution I need. Can you help?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Absolutely. We'll discuss your goals, understand your challenges, and recommend the most suitable solution for your business and budget.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <button class="back-to-top" id="backToTop">↑</button>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-watermark" aria-hidden="true">
+                Zoura Labs
+            </div>
+
+            <div class="footer-top">
+                <!-- Brand / Intro -->
+                <section class="footer-brand" aria-labelledby="footer-connect-title">
+                    <h2 id="footer-connect-title" class="section-tag">
+                        Let's Connect
+                    </h2>
+
+                    <p class="footer-lead">
+                        Have a project in mind? We'd love to hear about it.
+                    </p>
+
+                    <address>
+                        <a class="footer-email" href="mailto:hello@zouralabs.com?subject=Project%20Inquiry%20-%20Zoura%20Labs&amp;body=Hello%20Zoura%20Labs,%0D%0A%0D%0AI%20would%20like%20to%20inquire%20about%20your%20services%20and%20discuss%20a%20potential%20project.%0D%0A%0D%0AProject%20details:%0D%0A-%20Type%20of%20project:%0D%0A-%20Requirements:%0D%0A-%20Timeline:%0D%0A-%20Budget:%0D%0A-%20Phone%20number%20(optional):%0D%0A%0D%0APlease%20let%20me%20know%20your%20availability.%0D%0A%0D%0ARegards,%0D%0A%5BYour%20Name%5D">
+                            hello@zouralabs.com
+                        </a>
+                    </address>
+
+                    <p>
+                        Building premium websites, brands and digital experiences for ambitious businesses.
+                    </p>
+                </section>
+
+                <!-- Footer Links -->
+                <!-- <nav class="footer-links" aria-label="Footer navigation"> -->
+                <section class="footer-column" aria-labelledby="nav-title">
+                    <h3 id="nav-title">Navigation</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/work/">Work</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="services-title">
+                    <h3 id="services-title">Services</h3>
+                    <ul>
+                        <li><a href="/services/web-mobile/">Web & Apps</a></li>
+                        <li><a href="/services/business-systems/">Systems</a></li>
+                        <li><a href="/services/ai-automation/">AI</a></li>
+                        <li><a href="/services/digital-marketing/">Marketing</a></li>
+                        <li><a href="/services/branding-design/">Branding & Design</a></li>
+                        <li><a href="/services/ecommerce/">Commerce</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column socials" aria-labelledby="social-title">
+                    <h3 id="social-title">Social</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Behance</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="location-title">
+                    <h3 id="location-title">Location</h3>
+                    <ul>
+                        <li>Colombo, Sri Lanka</li>
+                        <li>Working Worldwide</li>
+                        <li>GMT +5:30</li>
+                    </ul>
+
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>7:00 AM – 10:00 PM</li>
+                        <li>Daily (GMT +5:30)</li>
+                    </ul>
+                </section>
+                <!-- </nav> -->
+            </div>
+
+            <!-- Bottom legal area -->
+            <div class="footer-bottom">
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script> Zoura Labs. All Rights Reserved.
+                </p>
+
+                <nav aria-label="Legal links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="/terms/">Terms of Service</a>
+                </nav>
+
+                <p>Built by Zoura Labs · Sri Lanka</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/assets/js/global.js"></script>
+    <script>
+        const overlay = document.getElementById("overlay");
+
+        document.getElementById("phoneBtn").onclick = () => {
+            overlay.classList.add("show");
+        };
+
+        document.getElementById("closeBtn").onclick = () => {
+            overlay.classList.remove("show");
+        };
+
+        overlay.onclick = (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove("show");
+            }
+        };
+
+
+
+
+
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const raw = localStorage.getItem("selectedService");
+            if (!raw) return;
+
+            const data = JSON.parse(raw);
+
+            const inquiryField = document.querySelector('[name="inquiry"]');
+            const messageField = document.querySelector('[name="message"]');
+
+            // ✅ INQUIRY = TITLE (IMPORTANT FIX)
+            if (inquiryField && data.serviceTitle?.trim()) {
+                inquiryField.value = data.serviceTitle;
+            }
+
+            const lines = [];
+
+            const title = data.serviceTitle?.trim() || "your service";
+
+            // Intro message
+            lines.push(`Hi, I'm interested in your ${title} service.`);
+            lines.push("");
+
+            // Dynamic fields (skip empty)
+            const fields = [
+                { key: "idealFor", label: "Ideal For" },
+                { key: "delivery", label: "Delivery Time" },
+                { key: "scalable", label: "Scalable" },
+                { key: "platforms", label: "Platforms" },
+                { key: "technology", label: "Technology" },
+                { key: "suitableFor", label: "Suitable For" },
+                { key: "notes", label: "Notes" }
+            ];
+
+            fields.forEach((f) => {
+                const value = data[f.key];
+                if (value && value.trim() !== "") {
+                    lines.push(`${f.label}: ${value}`);
+                }
+            });
+
+            lines.push("");
+            lines.push("Please get back to me with details.");
+            lines.push("");
+            lines.push("Note: You can type here your own message as well!");
+
+            if (messageField) {
+                messageField.value = lines.join("\n");
+            }
+
+            localStorage.removeItem("selectedService");
+        });
+
+
+
+
+
+
+
+
+
+        gsap.from(".faq-section .section-tag", {
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".faq-section .section-tag",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        gsap.from(".faq-section .heading", {
+            y: 60,
+            opacity: 0,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: ".faq-section .heading",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        gsap.from(".faq-section .description", {
+            y: 60,
+            opacity: 0,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: ".faq-section .description",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        gsap.utils.toArray(".faq-section .faq-item").forEach((item) => {
+            gsap.from(item, {
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",
+                },
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                ease: "power4.out"
+            });
+        });
+
+        document.querySelectorAll(".faq-item").forEach(item => {
+            const btn = item.querySelector(".faq-question");
+            btn.addEventListener("click", () => {
+                item.classList.toggle("active");
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                gsap.to(".scroll-cue", {
+                    opacity: 0,
+                    y: 20,
+                    duration: .3
+                });
+            } else {
+                gsap.to(".scroll-cue", {
+                    opacity: 1,
+                    y: 0,
+                    duration: .3
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

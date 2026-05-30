@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | Zoura Labs</title>
+    <meta name="description" content="Insights on design, development, SEO and digital growth from Zoura Labs.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        /* =========================
+   HERO (same system as About)
+========================= */
+
+        .blog-hero {
+            position: relative;
+            padding: 0 8vw;
+        }
+
+        .blog-hero .container {
+            max-width: 1280px;
+            margin: auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            pointer-events: none;
+        }
+
+        .hero-glow .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(123, 97, 255, .25);
+            box-shadow: 0 0 60px rgba(123, 97, 255, .15);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ring-1 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .ring-2 {
+            width: 450px;
+            height: 450px;
+            opacity: .6;
+        }
+
+        .ring-3 {
+            width: 600px;
+            height: 600px;
+            opacity: .3;
+        }
+
+        .section-tag {
+            color: #7b61ff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: .9rem;
+        }
+
+        h1 {
+            font-size: clamp(70px, 8vw, 160px);
+            line-height: .9;
+            margin-top: 30px;
+        }
+
+        .subtitle {
+            margin-top: 40px;
+            max-width: 650px;
+            color: rgba(255, 255, 255, .55);
+            line-height: 1.9;
+            font-size: 1.1rem;
+        }
+
+        /* =========================
+   STACKED BLOG LIST
+========================= */
+
+        .blog-section {
+            padding: 0 8vw 120px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: auto;
+        }
+
+        /* FEATURED POST */
+        .featured {
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 30px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            margin-bottom: 60px;
+            transition: .4s;
+        }
+
+        .featured:hover {
+            border-color: #7b61ff;
+            transform: translateY(-6px);
+        }
+
+        .featured-img {
+            min-height: 320px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .featured-content {
+            padding: 40px;
+        }
+
+        .tag {
+            color: #7b61ff;
+            letter-spacing: 2px;
+            font-size: .8rem;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-top: 15px;
+            line-height: 1.2;
+        }
+
+        .desc {
+            margin-top: 20px;
+            color: rgba(255, 255, 255, .6);
+            line-height: 1.8;
+        }
+
+        .meta {
+            margin-top: 25px;
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .4);
+        }
+
+        /* STACKED LIST */
+        .post {
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            transition: .3s;
+        }
+
+        .post:hover {
+            transform: translateX(8px);
+        }
+
+        .post .tag {
+            font-size: .75rem;
+        }
+
+        .post h3 {
+            font-size: 1.6rem;
+            margin-top: 10px;
+        }
+
+        .post p {
+            margin-top: 10px;
+            color: rgba(255, 255, 255, .6);
+            line-height: 1.7;
+        }
+
+        .post-meta {
+            margin-top: 10px;
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .4);
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 120px 8vw;
+        }
+
+        .cta h2 {
+            font-size: clamp(60px, 8vw, 120px);
+            line-height: 1;
+        }
+
+        .cta p {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, .6);
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px) {
+            .featured {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="blog-hero">
+        <div class="container">
+
+            <div class="hero-glow">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+            </div>
+
+            <span class="section-tag">Insights & Thinking</span>
+
+            <h1>Blog</h1>
+
+            <p class="subtitle">
+                Ideas on design systems, development, SEO, branding, and building
+                digital products that scale.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="blog-section">
+        <div class="container">
+
+            <!-- FEATURED POST -->
+            <article class="featured">
+                <div class="featured-img" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200')"></div>
+                <div class="featured-content">
+                    <div class="tag">Featured</div>
+                    <h2 class="title">Why Good Design Feels Invisible</h2>
+                    <p class="desc">
+                        Great digital experiences don’t feel designed — they feel natural.
+                        That’s the difference between UI and UX mastery.
+                    </p>
+                    <div class="meta">5 min read · June 2026</div>
+                </div>
+            </article>
+
+            <!-- STACKED POSTS -->
+            <article class="post">
+                <div class="tag">SEO</div>
+                <h3>Modern SEO is No Longer About Keywords</h3>
+                <p>Search ranking now depends on structure, intent, and user experience.</p>
+                <div class="post-meta">7 min read</div>
+            </article>
+
+            <article class="post">
+                <div class="tag">Development</div>
+                <h3>Building Scalable Web Architectures</h3>
+                <p>How modern web apps stay fast, modular, and maintainable at scale.</p>
+                <div class="post-meta">8 min read</div>
+            </article>
+
+            <article class="post">
+                <div class="tag">Branding</div>
+                <h3>Why Consistency Builds Trust</h3>
+                <p>Brand trust is built through repetition, not one-time design impact.</p>
+                <div class="post-meta">6 min read</div>
+            </article>
+
+            <article class="post">
+                <div class="tag">Strategy</div>
+                <h3>Why Most Agencies Fail at Growth</h3>
+                <p>They focus on execution, not systems thinking and positioning.</p>
+                <div class="post-meta">9 min read</div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Build something worth writing about</h2>
+        <p>Let’s turn ideas into digital experiences.</p>
+    </section>
+
+</body>
+
+</html>

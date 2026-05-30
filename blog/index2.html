@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog | Zoura Labs</title>
+<meta name="description" content="Insights, design systems, development tips, SEO strategies and digital growth thinking from Zoura Labs.">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+<style>
+
+/* BLOG HERO (same DNA as about page) */
+.blog-hero{
+    position:relative;
+    padding:0 8vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.blog-hero .container{
+    max-width:1280px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.blog-glow{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(123,97,255,.25), transparent 60%);
+    filter:blur(40px);
+}
+
+.section-tag{
+    color:#7b61ff;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:.9rem;
+}
+
+.blog-hero h1{
+    font-size:clamp(60px,8vw,150px);
+    line-height:.9;
+    margin-top:25px;
+}
+
+.blog-hero p{
+    margin-top:30px;
+    max-width:600px;
+    color:rgba(255,255,255,.6);
+    line-height:1.8;
+}
+
+/* BLOG GRID */
+.blog-section{
+    padding:120px 8vw;
+}
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.blog-card{
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    overflow:hidden;
+    transition:.4s ease;
+    background:rgba(255,255,255,.02);
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    border-color:#7b61ff;
+}
+
+.blog-img{
+    height:220px;
+    background-size:cover;
+    background-position:center;
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-tag{
+    font-size:.75rem;
+    letter-spacing:2px;
+    color:#7b61ff;
+    text-transform:uppercase;
+}
+
+.blog-title{
+    font-size:1.4rem;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.blog-desc{
+    color:rgba(255,255,255,.6);
+    font-size:.95rem;
+    line-height:1.7;
+}
+
+.blog-meta{
+    margin-top:15px;
+    font-size:.8rem;
+    color:rgba(255,255,255,.4);
+}
+
+/* CTA */
+.blog-cta{
+    padding:120px 8vw;
+    text-align:center;
+}
+
+.blog-cta h2{
+    font-size:clamp(50px,7vw,110px);
+    line-height:1;
+}
+
+.blog-cta p{
+    margin-top:25px;
+    color:rgba(255,255,255,.6);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .blog-grid{grid-template-columns:1fr;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV (keep your existing navbar here) -->
+<nav class="navbar">
+    <a href="/" class="logo"><img src="/assets/icons/logo.png"></a>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/work/">Work</a>
+        <a href="/services/">Services</a>
+        <a href="/about/">About</a>
+        <a href="/blog/" class="active">Blog</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="/contact/" class="nav-btn">Let's Talk</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+    <div class="blog-glow"></div>
+
+    <div class="container">
+        <span class="section-tag">Insights & Thinking</span>
+        <h1>Design. Code.<br>Growth.</h1>
+        <p>
+            Thoughts on web development, UI/UX systems, SEO strategy, branding,
+            and building digital products that actually scale.
+        </p>
+    </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="blog-section">
+    <span class="section-tag">Latest Articles</span>
+
+    <div class="blog-grid">
+
+        <!-- CARD -->
+        <article class="blog-card">
+            <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200');"></div>
+            <div class="blog-content">
+                <div class="blog-tag">UI/UX</div>
+                <h3 class="blog-title">Why Good Design Feels Invisible</h3>
+                <p class="blog-desc">
+                    Great UX doesn’t scream—it guides. Learn how invisible design improves conversions.
+                </p>
+                <div class="blog-meta">5 min read · June 2026</div>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200');"></div>
+            <div class="blog-content">
+                <div class="blog-tag">SEO</div>
+                <h3 class="blog-title">Modern SEO in 2026 Explained</h3>
+                <p class="blog-desc">
+                    SEO is no longer keywords—it’s structure, intent, and experience-driven ranking.
+                </p>
+                <div class="blog-meta">7 min read · June 2026</div>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200');"></div>
+            <div class="blog-content">
+                <div class="blog-tag">Development</div>
+                <h3 class="blog-title">Building Scalable Web Apps</h3>
+                <p class="blog-desc">
+                    Architecture patterns that help your web apps survive real-world traffic.
+                </p>
+                <div class="blog-meta">8 min read · June 2026</div>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200');"></div>
+            <div class="blog-content">
+                <div class="blog-tag">Branding</div>
+                <h3 class="blog-title">How Brands Actually Build Trust</h3>
+                <p class="blog-desc">
+                    Trust isn’t logos—it’s consistency across every digital touchpoint.
+                </p>
+                <div class="blog-meta">6 min read · June 2026</div>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200');"></div>
+            <div class="blog-content">
+                <div class="blog-tag">Strategy</div>
+                <h3 class="blog-title">Why Most Agencies Fail</h3>
+                <p class="blog-desc">
+                    The gap between design execution and business strategy kills most agencies.
+                </p>
+                <div class="blog-meta">9 min read · June 2026</div>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200');"></div>
+            <div class="blog-content">
+                <div class="blog-tag">Growth</div>
+                <h3 class="blog-title">How Websites Actually Convert</h3>
+                <p class="blog-desc">
+                    Conversion isn’t design—it’s clarity, hierarchy, and psychological flow.
+                </p>
+                <div class="blog-meta">5 min read · June 2026</div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="blog-cta">
+    <h2>Build something worth writing about</h2>
+    <p>Let’s turn your idea into a digital product people remember.</p>
+</section>
+
+</body>
+</html>

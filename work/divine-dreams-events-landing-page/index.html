@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divine Dreams Events Landing Page Case Study - Zoura Labs</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/common.css">
+
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Project Name",
+          "url": "https://zouralabs.com/work/divine-dreams-events-landing-page",
+          "description": "A modern ordering website serving bold, spicy Sri Lankan cuisine and Asian fusion
+          from Kurunegala—freshly cooked, hot, and just a click away."
+        }
+        </script>
+
+    <script type="application/ld+json">
+        {
+         "@context":"https://schema.org",
+         "@type":"CreativeWork",
+         "name":"Restaurant Website Redesign",
+         "creator":{
+         "@type":"Organization",
+         "name":"Zoura Labs"
+         },
+         "description":"Modern redesign with SEO optimization."
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"CreativeWork",
+            "name":"Restaurant Website Redesign",
+            "creator":{
+              "@type":"Organization",
+              "name":"Zoura Labs"
+            },
+            "about":"Web Development",
+            "datePublished":"2026-06-11"
+           }        
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://zouralabs.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Work",
+              "item": "https://zouralabs.com/work"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Divine Dreams Events Landing Page",
+              "item": "https://zouralabs.com/work/divine-dreams-events-landing-page"
+            }
+          ]
+        }
+        </script>
+    <style>
+        #light {
+            background: radial-gradient(circle,
+                    #D4A774 20%,
+                    rgba(255, 140, 0, 0.1) 70%,
+                    transparent 100%);
+            filter: blur(20px);
+        }
+
+        .project-hero {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin-block: 170px 100px;
+                margin-inline: auto;
+            }
+
+            .project-meta {
+                color: #7b61ff;
+                letter-spacing: 2px;
+                display: none;
+            }
+
+            .heading {
+                margin-top: 30px;
+                font-size: clamp(70px, 8vw, 130px);
+                line-height: .95;
+                font-weight: 700;
+                letter-spacing: -2%;
+            }
+
+            .description {
+                margin-top: 50px;
+                max-width: 550px;
+                color: rgba(255, 255, 255, .55);
+                line-height: 1.9;
+            }
+
+            .hero-actions {
+                display: flex;
+                gap: 16px;
+                margin-top: 40px;
+                flex-wrap: wrap;
+
+                .cta--primary {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background: #d4a774;
+                    box-shadow: 0 10px 30px #d4a77435;
+                }
+
+                .cta--primary:hover {
+                    box-shadow: 0 10px 30px #d4a77485;
+                }
+
+                .cta--primary span {
+                    transition: .3s ease;
+                }
+
+                .cta--primary:hover span {
+                    transform: translate(4px, -4px);
+                }
+
+                .cta--secondary:hover {
+                    border-color: #d4a774;
+                    background: #d4a774;
+                    box-shadow: 0 10px 30px #d4a77485;
+                }
+            }
+
+            .floating-demo {
+                position: fixed;
+                right: 8vw;
+                bottom: 10%;
+                z-index: 999;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 14px 22px;
+                border-radius: 999px;
+                text-decoration: none;
+                color: white;
+                background: rgba(10, 10, 10, .8);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, .08);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
+            }
+
+            .pulse {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #35ff8a;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(53, 255, 138, .5);
+                }
+
+                100% {
+                    box-shadow: 0 0 0 15px rgba(53, 255, 138, 0);
+                }
+            }
+
+            .floating-demo:hover {
+                border-color: #D4A774;
+            }
+        }
+
+
+
+        .showcase-image {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                    display: block;
+                    border-radius: 40px;
+                }
+            }
+        }
+
+
+
+        .overview {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+                padding: 100px 0;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 80px;
+            }
+
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                color: #fff8;
+                line-height: 1.9;
+            }
+
+            .content p {
+                margin-bottom: 16px;
+            }
+
+            .content p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+
+
+        .challenge {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+                padding: 100px 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 60px;
+            }
+
+            .block {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .content-list {
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                }
+
+                .content-list li {
+                    position: relative;
+                    padding-left: 18px;
+                    color: #fff8;
+                }
+
+                .content-list li::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    color: #D4A774;
+                }
+            }
+
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                color: #fff8;
+                line-height: 1.9;
+            }
+
+            .content p {
+                margin-bottom: 16px;
+            }
+
+            .content p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+
+
+
+        .design-system {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+                padding: 100px 0;
+            }
+
+            .section-header {
+                max-width: 700px;
+                margin-bottom: 60px;
+            }
+
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                color: #fff8;
+                line-height: 1.9;
+            }
+
+            .design-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 60px;
+            }
+
+            .design-block {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .content {
+                    color: #fff8;
+                    line-height: 1.9;
+                }
+
+                .content p {
+                    margin-bottom: 16px;
+                }
+
+                .content p:last-child {
+                    margin-bottom: 0;
+                }
+
+                .content-list {
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                }
+
+                .content-list li {
+                    position: relative;
+                    padding-left: 18px;
+                    color: #fff8;
+                }
+
+                .content-list li::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    color: #D4A774;
+                }
+            }
+
+
+
+
+            .colors {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .color {
+                width: 140px;
+                height: 140px;
+                border-radius: 20px;
+                display: flex;
+                align-items: flex-end;
+                padding: 12px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .color span {
+                font-size: 12px;
+                padding: 6px 10px;
+                border-radius: 999px;
+                background: rgba(0, 0, 0, 0.35);
+                backdrop-filter: blur(6px);
+            }
+
+            .white span {
+                background: rgba(255, 255, 255, 0.7);
+                color: #111;
+            }
+
+            /* palette */
+            .deep-navy {
+                background: #333333;
+                /* Dark Gray/Navy tone */
+            }
+
+            .soft-cream {
+                background: #FCF8F6;
+                /* Very light cream */
+            }
+
+            .soft-pink {
+                background: #FCF6F9;
+                /* Subtle pinkish neutral */
+            }
+
+            .accent-gold {
+                background: #d4a774;
+                /* Warm golden accent */
+            }
+
+            .clean-white {
+                background: #F9F9F9;
+                /* Bright white */
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        .technologies {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+                padding: 100px 0;
+            }
+
+            .section-header {
+                max-width: 700px;
+                margin-bottom: 60px;
+            }
+
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                color: #fff8;
+                line-height: 1.9;
+            }
+
+            .tech-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 60px;
+            }
+
+            .tech-block {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .content-list {
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                }
+
+                .content-list li {
+                    position: relative;
+                    padding-left: 18px;
+                    color: #fff8;
+                }
+
+                .content-list li::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    color: #D4A774;
+                }
+            }
+        }
+
+        /* =========================
+        RESPONSIVE
+        ========================= */
+        @media (max-width: 900px) {
+            .overview {
+                grid-template-columns: 1fr;
+            }
+
+            .challenge {
+                grid-template-columns: 1fr;
+            }
+
+            .design-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+        .gallery {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+                padding: 0 0 150px;
+            }
+
+            .heading {
+                display: none;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+
+                img {
+                    width: 100%;
+                    border-radius: 30px;
+                }
+
+                img:first-child {
+                    grid-column: span 2;
+                }
+            }
+        }
+
+
+        .demo-section {
+            position: relative;
+            text-align: center;
+            padding: 100px 8vw;
+            border-radius: 40px;
+            margin: auto;
+            max-width: 1200px;
+            overflow: hidden;
+
+            ::before {
+                content: "";
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                top: -250px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            h2 {
+                font-size: clamp(40px, 5vw, 80px);
+                margin: 20px 0;
+            }
+
+            p {
+                max-width: 650px;
+                margin: auto;
+                color: var(--text-dim);
+            }
+
+            .demo-large-btn {
+                display: inline-block;
+                margin-top: 40px;
+                padding: 18px 36px;
+                border-radius: 999px;
+                text-decoration: none;
+                color: white;
+                background: #D4A774;
+                box-shadow: 0 10px 30px #FFB70335;
+                font-weight: 600;
+                transition: .35s ease;
+            }
+
+            .demo-large-btn:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+
+
+        .results {
+            padding: 0 8vw;
+
+            .container {
+                max-width: 1440px;
+                margin: auto;
+                padding: 100px 0;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+
+                div {
+                    opacity: .5;
+                    transition: .3s;
+                }
+
+                div:hover {
+                    opacity: 1;
+                }
+
+                h3 {
+                    font-size: clamp(50px, 6vw, 100px);
+                    color: #D4A774;
+                }
+
+            }
+        }
+
+
+
+        .next-project {
+            padding: 200px 8vw;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                background: #D4A774;
+                border-color: #D4A774;
+                margin-bottom: 30px;
+                box-shadow: 0 10px 30px #D4A77435;
+            }
+
+            .heading {
+                font-size: clamp(70px, 8vw, 130px);
+                line-height: .95;
+                letter-spacing: -3px;
+                font-weight: 700;
+            }
+
+            .description {
+                max-width: 550px;
+                margin-top: 30px;
+                color: var(--text-dim);
+                line-height: 1.9;
+                margin-inline: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <div class="light" id="light"></div>
+
+    <div class="preloader">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="ring"></div>
+        <div class="center">
+            <div class="logo">Zoura Labs</div>
+            <div class="percent"><span id="percent">0</span>%</div>
+        </div>
+    </div>
+
+
+    <!-- BACKGROUND -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+    <div class="glow-line"></div>
+
+
+
+    <div class="social-rail">
+        <a href="#" aria-label="X (Twitter)">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a href="#" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+        </a>
+    </div>
+
+
+
+    <header class="navbar">
+        <nav class="container">
+            <!-- LEFT -->
+            <a href="/" class="logo" aria-label="Zoura Labs homepage">
+                <!-- Zoura Labs -->
+                <img src="/assets/icons/logo.png" alt="Company Logo">
+            </a>
+
+            <!-- CENTER LINKS -->
+            <div class="nav-links">
+                <a href="/" class="nav-link" aria-label="Zoura Labs Homepage">
+                    Home
+                    <span class="tooltip">Homepage</span>
+                </a>
+
+                <a href="/work/" class="nav-link" aria-label="View Zoura Labs portfolio work">
+                    Work
+                    <span class="tooltip">Selected projects & case studies</span>
+                </a>
+
+                <a href="/services/" class="nav-link" aria-label="Explore Zoura Labs services">
+                    Services
+                    <span class="tooltip">Full range of digital services</span>
+                </a>
+
+                <a href="/about/" class="nav-link" aria-label="Learn about Zoura Labs">
+                    About
+                    <span class="tooltip">Who we are & how we work</span>
+                </a>
+
+                <a href="/blog/" class="nav-link" aria-label="Read Zoura Labs blog articles">
+                    Blog
+                    <span class="tooltip">Insights, updates & thinking</span>
+                </a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="nav-right">
+                <a href="tel:+94767855906" class="nav-phone" aria-label="Call Zoura Labs at +94 76 785 5906">
+
+                    <span class="dot"></span>
+                    +94 76 785 5906
+                    <span class="tooltip">Speak directly with our team</span>
+
+                </a>
+
+                <a href="/contact/" class="nav-btn" aria-label="Start a project with Zoura Labs">
+                    Let's Talk
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="main">
+        <section class="project-hero">
+            <div class="container">
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/work">Work</a></li>
+                        <li aria-current="page">Divine Dreams Events</li>
+                    </ol>
+                </nav>
+
+                <div class="project-meta">Web Design • Development</div>
+                <h1 class="heading">Divine Dreams Events Landing Page</h1>
+                <p class="description">
+                    Divine Dreams Events is a premium event planning brand. The website
+                    was designed to reflect elegance and trust while enabling fast, mobile‑first
+                    interactions for clients seeking weddings, corporate events, and celebrations.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="https://divinedreamsevents.netlify.app/" class="cta cta--primary">
+                        View Live Demo
+                        <span>↗</span>
+                    </a>
+
+                    <a href="/work/" class="cta cta-secondary">
+                        More Work
+                    </a>
+                </div>
+
+                <a href="https://divinedreamsevents.netlify.app/" class="floating-demo">
+                    <span class="pulse"></span>
+                    Live Demo ↗
+                </a>
+            </div>
+        </section>
+
+
+        <div class="showcase-image">
+            <div class="container">
+                <img src="/assets/img/divine-dreams-events-01.png" alt="Project Preview">
+            </div>
+        </div>
+
+
+
+        <!-- OVERVIEW -->
+        <section class="section overview" id="overview">
+            <div class="container">
+                <div class="section-left">
+                    <h2 class="section-title">Overview</h2>
+                </div>
+
+                <div class="section-right content">
+                    <p>
+                        Divine Dreams Events is a premium event planning brand specializing in weddings,
+                        corporate functions, and private celebrations. The website was envisioned as a
+                        digital showcase and lead‑generation hub, designed to reflect the elegance of
+                        the brand while offering a seamless way for clients to connect.
+                    </p>
+
+                    <p>
+                        Instead of a traditional multi‑page site, the project focused on a conversion‑driven
+                        landing experience that highlights services and enables instant communication.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROBLEM / GOALS / SOLUTION -->
+        <section class="section challenge" id="challenge">
+            <div class="container">
+
+                <!-- PROBLEM -->
+                <article class="block">
+                    <h2 class="section-title">Problem</h2>
+
+                    <div class="content">
+                        <p>
+                            Most event service websites were slow, cluttered, and form‑heavy, making
+                            it difficult for users to quickly book or inquire. Clients often abandoned
+                            the process due to long load times or complicated steps, especially on mobile.
+                        </p>
+
+                        <p>
+                            Divine Dreams Events needed a solution that would remove friction, build trust,
+                            and deliver a fast, elegant experience aligned with its premium brand.
+                        </p>
+                    </div>
+                </article>
+
+
+                <!-- GOALS -->
+                <article class="block">
+                    <h2 class="section-title">Goals</h2>
+
+                    <ul class="content-list">
+                        <li>Build a fast, mobile‑first website that loads instantly and adapts to any screen size.</li>
+                        <li>Create a direct communication channel that reduces waiting time and increases conversions.</li>
+                        <li>Present services with clear, outcome‑oriented messaging that resonates with clients.</li>
+                        <li>Establish a premium brand identity through elegant design choices and consistent visuals.</li>
+                    </ul>
+                </article>
+
+
+                <!-- SOLUTION -->
+                <article class="block">
+                    <h2 class="section-title">Solution</h2>
+
+                    <div class="content">
+                        <p>
+                            The site was built with Vite to ensure fast load times and smooth performance.
+                            A WhatsApp ordering flow was added for instant communication, supported by a minimal
+                            navigation system and a mobile‑first responsive layout.
+                        </p>
+
+                        <p>
+                            Assets were optimized to keep the experience lightweight and efficient, aligning with the brand’s premium identity.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- DESIGN SYSTEM -->
+        <section class="section design-system" id="design-system">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Design System</h2>
+
+                    <p class="description">
+                        The design system was built to balance premium aesthetics with functional clarity.
+                        It emphasizes consistency, scalability, and a minimal feel that aligns with the brand’s identity.
+                        Typography, spacing, and components were carefully chosen to create a sense of elegance while keeping
+                        interactions simple and intuitive.
+                    </p>
+                </div>
+
+
+                <div class="design-grid">
+
+                    <div class="design-block">
+                        <h3>UI/UX Approach</h3>
+
+                        <div class="content">
+                            <p>
+                                The user experience focuses on speed and simplicity. Navigation is minimal and category‑based,
+                                ensuring users can find what they need quickly. A direct WhatsApp action flow is integrated
+                                throughout the journey, reducing friction and enabling instant communication.
+                            </p>
+
+                            <p>
+                                Copywriting is outcome‑oriented, while trust signals such as clear promises (“We reply within hours”) reinforce credibility.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="design-block">
+                        <h3>Design Elements</h3>
+
+                        <ul class="content-list">
+                            <li>Bold hero headline with dual CTAs (WhatsApp + Explore Services)</li>
+                            <li>Service cards framed around client outcomes (Weddings, Corporate Events, Celebrations)</li>
+                            <li>Contact section with dual channel (WhatsApp + form)</li>
+                            <li>Footer reinforcing brand identity with quick links and final CTA</li>
+                            <li>Generous whitespace and premium typography for a modern, elegant feel</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="design-block">
+                        <h3>Color System</h3>
+
+                        <div class="colors">
+                            <div class="color deep-navy"><span>#0A001A</span></div>
+                            <div class="color accent-purple"><span>#6A00FF</span></div>
+                            <div class="color accent-cyan"><span>#00C8FF</span></div>
+                            <div class="color accent-gold"><span>#D4A774</span></div>
+                            <div class="color clean-white"><span>#F9F9F9</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="section technologies" id="technologies">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technology Stack</h2>
+
+                    <p class="description">
+                        A lightweight, modern stack was selected to maximize speed and efficiency.
+                    </p>
+                </div>
+
+                <div class="tech-grid">
+
+                    <div class="tech-block">
+                        <h3>Frontend (Powered by Vite)</h3>
+
+                        <ul class="content-list">
+                            <!-- <li>Vite</li> -->
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-block">
+                        <h3>Features</h3>
+
+                        <ul class="content-list">
+                            <li>WhatsApp Ordering Flow</li>
+                            <li>Reservation System</li>
+                            <li>Pre-filled Message Automation</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-block">
+                        <h3>Performance</h3>
+
+                        <ul class="content-list">
+                            <li>Mobile-First Design</li>
+                            <li>Responsive Layout</li>
+                            <li>Optimized Asset Loading</li>
+                            <li>Fast Build Process with Vite</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="gallery">
+            <div class="container">
+                <h2 class="heading">Gallery</h2>
+                <div class="grid">
+                    <img src="/assets/img/divine-dreams-events-02.png">
+                    <img src="/assets/img/divine-dreams-events-03.png">
+                    <img src="/assets/img/divine-dreams-events-04.png">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="demo-section">
+            <span class="tag">Live Experience</span>
+            <h2>Experience The Platform</h2>
+            <p>Discover the curated event journey and seamless booking experience.</p>
+
+            <a href="https://divinedreamsevents.netlify.app/" class="demo-large-btn">
+                View Live Demo <span>↗</span>
+            </a>
+        </section>
+
+
+        <section class="results">
+            <div class="container">
+                <div>
+                    <h3>+110%</h3>
+                    <p>Engagement</p>
+                </div>
+
+                <div>
+                    <h3>+90%</h3>
+                    <p>Lead Generation</p>
+                </div>
+
+                <div>
+                    <h3>+60%</h3>
+                    <p>Time on Site</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="next-project">
+            <a href="/work/globetrek-travel-booking-platform/" class="cta cta--primary">Next Project</a>
+
+            <h2 class="heading">
+                Globetrek Travel Booking System
+            </h2>
+
+            <p class="description">
+                A modern travel booking platform that helps travelers discover destinations, browse curated
+                tour packages, and book unforgettable adventures through a fast, responsive, and user-friendly experience.
+            </p>
+        </section>
+
+
+
+        <button class="back-to-top" id="backToTop">↑</button>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-watermark" aria-hidden="true">
+                Zoura Labs
+            </div>
+
+            <div class="footer-top">
+                <!-- Brand / Intro -->
+                <section class="footer-brand" aria-labelledby="footer-connect-title">
+                    <h2 id="footer-connect-title" class="section-tag">
+                        Let's Connect
+                    </h2>
+
+                    <p class="footer-lead">
+                        Have a project in mind? We'd love to hear about it.
+                    </p>
+
+                    <address>
+                        <a class="footer-email" href="mailto:hello@zouralabs.com?subject=Project%20Inquiry%20-%20Zoura%20Labs&amp;body=Hello%20Zoura%20Labs,%0D%0A%0D%0AI%20would%20like%20to%20inquire%20about%20your%20services%20and%20discuss%20a%20potential%20project.%0D%0A%0D%0AProject%20details:%0D%0A-%20Type%20of%20project:%0D%0A-%20Requirements:%0D%0A-%20Timeline:%0D%0A-%20Budget:%0D%0A-%20Phone%20number%20(optional):%0D%0A%0D%0APlease%20let%20me%20know%20your%20availability.%0D%0A%0D%0ARegards,%0D%0A%5BYour%20Name%5D">
+                            hello@zouralabs.com
+                        </a>
+                    </address>
+
+                    <p>
+                        Building premium websites, brands and digital experiences for ambitious businesses.
+                    </p>
+                </section>
+
+                <!-- Footer Links -->
+                <!-- <nav class="footer-links" aria-label="Footer navigation"> -->
+                <section class="footer-column" aria-labelledby="nav-title">
+                    <h3 id="nav-title">Navigation</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/work/">Work</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="services-title">
+                    <h3 id="services-title">Services</h3>
+                    <ul>
+                        <li><a href="/services/web-mobile/">Web & Apps</a></li>
+                        <li><a href="/services/business-systems/">Systems</a></li>
+                        <li><a href="/services/ai-automation/">AI</a></li>
+                        <li><a href="/services/digital-marketing/">Marketing</a></li>
+                        <li><a href="/services/branding-design/">Branding & Design</a></li>
+                        <li><a href="/services/ecommerce/">Commerce</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column socials" aria-labelledby="social-title">
+                    <h3 id="social-title">Social</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Behance</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-column" aria-labelledby="location-title">
+                    <h3 id="location-title">Location</h3>
+                    <ul>
+                        <li>Colombo, Sri Lanka</li>
+                        <li>Working Worldwide</li>
+                        <li>GMT +5:30</li>
+                    </ul>
+
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>7:00 AM – 10:00 PM</li>
+                        <li>Daily (GMT +5:30)</li>
+                    </ul>
+                </section>
+                <!-- </nav> -->
+            </div>
+
+            <!-- Bottom legal area -->
+            <div class="footer-bottom">
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script> Zoura Labs. All Rights Reserved.
+                </p>
+
+                <nav aria-label="Legal links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="/terms/">Terms of Service</a>
+                </nav>
+
+                <p>Built by Zoura Labs · Sri Lanka</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/assets/js/global.js"></script>
+    <script></script>
+</body>
+
+</html>

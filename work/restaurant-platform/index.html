@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2 - Zoura Labs</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+
+        {
+        
+         "@context":"https://schema.org",
+        
+         "@type":"CreativeWork",
+        
+         "name":"Restaurant Website Redesign",
+        
+         "creator":{
+        
+         "@type":"Organization",
+        
+         "name":"Zoura Labs"
+        
+         },
+        
+         "description":"Modern redesign with SEO optimization."
+        
+        }
+        
+        </script>
+
+
+
+    <script type="application/ld+json">
+
+        {
+        
+         "@context":"https://schema.org",
+        
+         "@type":"BreadcrumbList",
+        
+         "itemListElement":[
+        
+         {
+        
+         "@type":"ListItem",
+        
+         "position":1,
+        
+         "name":"Home",
+        
+         "item":"https://zouralabs.com"
+        
+         },
+        
+         {
+        
+         "@type":"ListItem",
+        
+         "position":2,
+        
+         "name":"Services",
+        
+         "item":"https://zouralabs.com/services"
+        
+         },
+        
+         {
+        
+         "@type":"ListItem",
+        
+         "position":3,
+        
+         "name":"Web Development",
+        
+         "item":"https://zouralabs.com/web-development"
+        
+         }
+        
+         ]
+        
+        }
+        
+        </script>
+    <style>
+        .project-hero {
+            padding: 250px 8vw 120px;
+
+            .project-meta {
+                color: #7b61ff;
+                letter-spacing: 2px;
+            }
+
+            h1 {
+                margin-top: 30px;
+                font-size: clamp(80px, 10vw, 180px);
+                line-height: .9;
+            }
+
+            p {
+                margin-top: 40px;
+                max-width: 650px;
+                color: rgba(255, 255, 255, .55);
+                line-height: 1.9;
+            }
+        }
+
+
+
+        .showcase-image {
+            padding: 0 8vw;
+
+            img {
+                width: 100%;
+                display: block;
+                border-radius: 40px;
+            }
+        }
+
+
+
+        .overview {
+            padding: 150px 8vw;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                color: #fff8;
+                line-height: 1.9;
+            }
+        }
+
+
+
+        .challenge {
+            padding: 0 8vw 150px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                color: #fff8;
+                line-height: 1.9;
+            }
+        }
+
+
+
+        .solution {
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                color: #fff8;
+                line-height: 1.9;
+            }
+        }
+
+
+
+        .design-system {
+            padding: 100px 8vw;
+
+            .section-title {
+                font-size: var(--h3-size);
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                color: #fff8;
+                line-height: 1.9;
+                max-width: 700px;
+            }
+
+            .colors {
+                margin-top: 60px;
+                display: flex;
+                gap: 30px;
+            }
+
+            .color {
+                width: 180px;
+                height: 180px;
+                border-radius: 24px;
+                z-index: 2;
+            }
+
+            .black {
+                background: #050505;
+            }
+
+            .white {
+                background: #ffffff;
+            }
+
+            .purple {
+                background: #7b61ff;
+            }
+        }
+
+
+
+        .gallery {
+            padding: 0 8vw 150px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+
+            img {
+                width: 100%;
+                border-radius: 30px;
+            }
+
+            img:first-child {
+                grid-column: span 2;
+            }
+        }
+
+
+
+        .results {
+            padding: 100px 8vw;
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                font-size: clamp(50px, 6vw, 100px);
+                color: #7b61ff;
+            }
+        }
+
+
+
+        .next-project {
+            padding: 200px 8vw;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            h2 {
+                margin-top: 30px;
+                font-size: clamp(60px, 8vw, 140px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="light" id="light"></div>
+
+    <div class="preloader">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="ring"></div>
+        <div class="center">
+            <div class="logo">Zoura Labs</div>
+            <div class="percent"><span id="percent">0</span>%</div>
+        </div>
+    </div>
+
+
+    <!-- BACKGROUND -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+    <div class="glow-line"></div>
+
+
+
+    <div class="social-rail">
+        <a href="#" aria-label="X (Twitter)">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a href="#" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+        </a>
+    </div>
+
+
+
+    <nav class="navbar">
+        <!-- LEFT -->
+        <a href="/" class="logo" aria-label="Zoura Labs homepage">
+            <!-- Zoura Labs -->
+            <img src="/assets/icons/logo.png" alt="Company Logo">
+        </a>
+
+        <!-- CENTER LINKS -->
+        <div class="nav-links">
+            <a href="/" class="nav-link" aria-label="Zoura Labs Homepage">
+                Home
+                <span class="tooltip">Homepage</span>
+            </a>
+
+            <a href="/work/" class="nav-link" aria-label="View Zoura Labs portfolio work">
+                Work
+                <span class="tooltip">Selected projects & case studies</span>
+            </a>
+
+            <a href="/services/" class="nav-link" aria-label="Explore Zoura Labs services">
+                Services
+                <span class="tooltip">Full range of digital services</span>
+            </a>
+
+            <a href="/about/" class="nav-link" aria-label="Learn about Zoura Labs">
+                About
+                <span class="tooltip">Who we are & how we work</span>
+            </a>
+
+            <a href="/blog/" class="nav-link" aria-label="Read Zoura Labs blog articles">
+                Blog
+                <span class="tooltip">Insights, updates & thinking</span>
+            </a>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+            <a href="tel:+94767855906" class="nav-phone" aria-label="Call Zoura Labs at +94 76 785 5906">
+
+                <span class="dot"></span>
+                +94 76 785 5906
+                <span class="tooltip">Speak directly with our team</span>
+
+            </a>
+
+            <a href="/contact/" class="nav-btn" aria-label="Start a project with Zoura Labs">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+
+
+    <section class="project-hero">
+        <div class="project-meta">
+            UI • Development
+        </div>
+
+        <h1>
+            Restaurant Platform
+        </h1>
+
+        <p>
+            A modern digital experience created for premium dining establishments,
+            featuring reservations, interactive menus, and immersive restaurant profiles.
+        </p>
+    </section>
+
+
+    <section class="showcase-image">
+        <img src="/assets/img/project2.jpg" alt="Project Preview">
+    </section>
+
+
+
+    <section class="overview">
+        <h2 class="section-title">Overview</h2>
+
+        <div class="content">
+            <p>
+                This restaurant platform was designed to create a seamless connection between
+                customers and dining experiences. It transforms traditional restaurant listings
+                into immersive digital showcases that highlight ambiance, menu quality, and service.
+            </p>
+
+            <p style="margin-top:30px;">
+                The system allows users to browse restaurants, explore digital menus, and make
+                instant reservations with a smooth and intuitive interface focused on speed and clarity.
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="challenge">
+        <div>
+            <h2 class="section-title">Challenge</h2>
+
+            <p class="content">
+                Most restaurant platforms are outdated and cluttered, making it difficult for users
+                to quickly find relevant dining options or complete reservations efficiently.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Solution</h2>
+
+            <p class="content">
+                A clean and elegant interface was introduced with fast booking flow, visual-first menus,
+                and smooth micro-interactions to improve user engagement and simplify the dining discovery process.
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="design-system">
+        <h2 class="section-title">Design System</h2>
+
+        <p class="content">
+            The design system uses dark elegant tones with warm accent colors to reflect a premium
+            dining atmosphere. Typography is carefully selected to balance modern UI clarity with luxury feel.
+        </p>
+
+        <div class="colors">
+            <div class="color black"></div>
+            <div class="color white"></div>
+            <div class="color purple"></div>
+        </div>
+    </section>
+
+
+
+    <section class="gallery">
+        <img src="../../assets/img/screen1.jpg">
+        <img src="../../assets/img/screen2.jpg">
+        <img src="../../assets/img/screen3.jpg">
+    </section>
+
+
+
+    <section class="results">
+        <div>
+            <h3>+150%</h3>
+            <p>Reservations</p>
+        </div>
+
+        <div>
+            <h3>+90%</h3>
+            <p>User Engagement</p>
+        </div>
+
+        <div>
+            <h3>+70%</h3>
+            <p>Return Visitors</p>
+        </div>
+    </section>
+
+
+
+    <section class="next-project">
+        <a href="/work/restaurant-booking-platform" class="cta">Next Project <span>→</span></a>
+
+        <h2>
+            Hotel Booking Platform
+        </h2>
+
+        <p style="margin-top:30px; max-width:700px; margin-inline:auto; color:rgba(255,255,255,.55); line-height:1.9;">
+            A smart booking system designed for hotels with real-time availability,
+            AI-based recommendations, and immersive property showcases.
+        </p>
+    </section>
+
+
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-watermark" aria-hidden="true">
+                Zoura Labs
+            </div>
+
+            <div class="footer-top">
+                <!-- Brand / Intro -->
+                <section class="footer-brand" aria-labelledby="footer-connect-title">
+                    <h2 id="footer-connect-title" class="section-tag">
+                        Let’s Connect
+                    </h2>
+
+                    <address>
+                        <a class="footer-email" href="mailto:hello@zouralabs.com?subject=Project%20Inquiry%20-%20Zoura%20Labs&body=Hello%20Zoura%20Labs,%0D%0A%0D%0AI%20would%20like%20to%20inquire%20about%20your%20services%20and%20discuss%20a%20potential%20project.%0D%0A%0D%0AProject%20details:%0D%0A-%20Type%20of%20project:%0D%0A-%20Requirements:%0D%0A-%20Timeline:%0D%0A-%20Budget:%0D%0A-%20Phone%20number%20(optional):%0D%0A%0D%0APlease%20let%20me%20know%20your%20availability.%0D%0A%0D%0ARegards,%0D%0A[Your%20Name]">
+                            hello@zouralabs.com
+                        </a>
+                    </address>
+
+                    <p>
+                        Building premium websites, brands and digital experiences for ambitious businesses.
+                    </p>
+
+                    <a href="/contact/" class="footer-btn">
+                        Start a Project <span aria-hidden="true">→</span>
+                    </a>
+                </section>
+
+                <!-- Footer Links -->
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <section class="footer-column" aria-labelledby="nav-title">
+                        <h3 id="nav-title">Navigation</h3>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/work/">Work</a></li>
+                            <li><a href="/services/">Services</a></li>
+                            <li><a href="/about/">About</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="footer-column" aria-labelledby="social-title">
+                        <h3 id="social-title">Social</h3>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+
+            <!-- Bottom legal area -->
+            <div class="footer-bottom">
+                <p>© 2026 Zoura Labs. All rights reserved.</p>
+
+                <nav aria-label="Legal links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="/terms/">Terms of Service</a>
+                </nav>
+
+                <p>Built by Zoura Labs · Sri Lanka</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/global.js"></script>
+
+
+    <script>
+
+        // ====================================
+        // MAGNETIC BUTTON
+        // ====================================
+
+        // const buttons = document.querySelectorAll(".cta");
+
+        // buttons.forEach((button) => {
+        //     button.addEventListener("mousemove", (e) => {
+        //         const rect = button.getBoundingClientRect();
+        //         const x = e.clientX - rect.left - rect.width / 2;
+        //         const y = e.clientY - rect.top - rect.height / 2;
+
+        //         gsap.to(button, {
+        //             x: x * 0.25,
+        //             y: y * 0.25,
+        //             duration: .4,
+        //             ease: "power3.out"
+        //         });
+        //     });
+
+        //     button.addEventListener("mouseleave", () => {
+        //         gsap.to(button, {
+        //             x: 0,
+        //             y: 0,
+        //             duration: .6,
+        //             ease: "elastic.out(1, 0.4)"
+        //         });
+        //     });
+        // });
+
+
+
+        const buttons = document.querySelectorAll(".cta, .secondary-btn");
+
+        buttons.forEach((button) => {
+            let bounds;
+
+            function move(x, y) {
+                gsap.to(button, {
+                    x,
+                    y,
+                    duration: 0.6,
+                    ease: "power3.out"
+                });
+            }
+
+            function onMouseMove(e) {
+                bounds = button.getBoundingClientRect();
+
+                const relX = e.clientX - bounds.left - bounds.width / 2;
+                const relY = e.clientY - bounds.top - bounds.height / 2;
+
+                // magnetic strength (higher = stronger pull)
+                const strength = 0.35;
+
+                move(relX * strength, relY * strength);
+
+                // optional glow follow effect
+                button.style.boxShadow = `
+            0 10px 30px rgba(157,124,255,0.25),
+            ${relX * 0.05}px ${relY * 0.05}px 40px rgba(157,124,255,0.15)
+        `;
+            }
+
+            function onMouseLeave() {
+                gsap.to(button, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "elastic.out(1, 0.5)"
+                });
+
+                button.style.boxShadow = "none";
+            }
+
+            button.addEventListener("mousemove", onMouseMove);
+            button.addEventListener("mouseleave", onMouseLeave);
+        });
+
+
+        // ====================================
+        // ORB FOLLOW
+        // ====================================
+
+        const orb = document.querySelector(".orb-1");
+
+        window.addEventListener("mousemove", (e) => {
+
+            gsap.to(orb, {
+                x: e.clientX * 0.15,
+                y: e.clientY * 0.15,
+                duration: 2,
+                ease: "power4.out"
+            });
+
+        });
+    </script>
+</body>
+
+</html>
